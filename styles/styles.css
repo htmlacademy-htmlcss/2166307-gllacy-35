@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 1200px;
+  min-height: 100%;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  background: var(--background, #FEAFC3);
+  color: #000000;
+}
+
+img {
+  /* нормализация тега IMG */
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.main-page,
+.main-inner {
+  flex-grow: 1;
+  /* делаем MAIN жадным через свойство flex-grow; реализуем sticky-footer */
+  color: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  top: 0;
+  left: 0;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: grid;
+    opacity: 0;
+  }
+
+  100% {
+    display: grid;
+    opacity: 1;
+  }
+}
+
+
+/*-↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------БЛОК НАВИГАЦИИ ---------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-----------*/
+
+.header-wrapper {
+  display: flex;
+  width: 1170px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.logo-link {
+  display: block;
+  width: 137px;
+  height: 56px;
+  margin-right: 16px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  background: #AF4FFF;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation-item {
+  display: flex;
+  padding: 16px;
+  text-decoration: none;
+  color: #2D3440;
+}
+
+.catalog {
+  padding-right: 38px;
+}
+
+.user-menu {
+  display: flex;
+  margin-left: auto;
+  gap: 16px;
+}
+
+.search-button {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 27px;
+  border: 0;
+}
+
+.search-button {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding: 6px 16px 6px 38px;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 27px;
+  border: 0;
+  flex-wrap: wrap;
+}
+
+
+
+
+/*-↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------БЛОК НАВИГАЦИИ ---------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------*/
+
+
+.main-page {
+  /*режем весь main на 7 ячеек с интервалом 80px  */
+  display: flex;
+  flex-direction: column;
+  width: 1170px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+
+
+/*-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ HERO БЛОК -----------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ----------*/
+
+
+
+
+
+
+
+
+
+/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------------  МОДАЛЬНОЕ  ОКНО  ----------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ --------------*/
+
+
+.modalwin {
+  display: none;
+  position: fixed;
+  width: 570px;
+  background: var(--background, #FCFCFC);
+  top: 18.12958825%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 5;
+  animation: fadeInFromNone 0.6s ease-in-out;
+}
+
+.shadow {
+  position: fixed;
+  display: var(--display, none);
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background: rgba(45, 52, 64, 0.3);
+  left: 0;
+  top: 0;
+  animation: fadeInFromNone 0.6s ease-in-out;
+}
+
+.feedback-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 442px;
+  gap: 42px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 64px 66px 64px;
+  background-color: #FCFCFC;
+  border: 0;
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+}
+
+
+.close-button {
+  position: absolute;
+  display: block;
+  width: 12.16px;
+  height: 12.16px;
+  border: 0;
+  top: 0;
+  right: 0;
+  background-image: url("../images/cross-btn.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
+
+
+
+.modal-submit-button {
+  display: flex;
+  flex-wrap: wrap;
+}
