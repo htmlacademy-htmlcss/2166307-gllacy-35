@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
 
-  <body>
+  <body class="mybody">
 
     <!--- ========================================= HEADER ==================================================-->
     <header>
@@ -18,22 +18,106 @@
       <div class="header-wrapper">
 
         <div class="nav-container">
-        <a class="logo-link" href="index.html">
-          <img class="gllacy-logo" src="images/gllacy-logo.svg" width="137" height="56"
-            alt="Логотип интернет магазина Глейси.">
-        </a>
+          <a class="logo-link" href="index.html">
+            <img class="gllacy-logo" src="images/gllacy-logo.svg" width="137" height="56"
+              alt="Логотип интернет магазина Глейси.">
+          </a>
 
-        <nav class="navigation">
-          <a class="navigation-item catalog" href="">Каталог</a>
-          <a class="navigation-item" href="">Доставка и оплата</a>
-          <a class="navigation-item" href="">О компании</a>
-        </nav>
+          <nav class="navigation">
+            <button class="catalog-button" id="catalog-btn" type="button" value="off">Каталог</button>
+            <!------------  Выпадающее меню Каталог------------>
+            <div class="catalog-menu">
+              <span class="catalog-novelties">Новинки</span>
+              <ul class="catalog-list">
+                <li class="catalog-item"><a class="catalog-link" href="">Сливочное</a></li>
+                <li class="catalog-item"><a class="catalog-link" href="">Щербеты</a></li>
+                <li class="catalog-item"><a class="catalog-link" href="">Фруктовый лед</a></li>
+                <li class="catalog-item"><a class="catalog-link" href="">Мелорин</a></li>
+              </ul>
+            </div>
+            <!------------  Выпадающее меню Каталог------------>
+            <a class="navigation-item" href="">Доставка и оплата</a>
+            <a class="navigation-item" href="">О компании</a>
+          </nav>
+
         </div>
+
         <div class="user-menu">
           <a class="contact-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-          <button class="search-button"><span class="visually-hidden">Поиск по сайту.</span></button>
-          <button class="user-button">Вход</button>
-          <button class="user-button"><span class="visually-hidden">Корзина.</span>Пусто</button>
+          <button class="search-button" id="search-btn" type="button" value="off"><span class="visually-hidden">Поиск по
+              сайту.</span></button>
+          <!------------  Поиск по сайту------------>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="for-search" for="search-target"><span class="visually-hidden">Поиск по сайту.</span></label>
+            <input class="search-line" placeholder="Поиск по сайту" type="text" name="search-request" id="search-target"
+              autocomplete="off" required>
+          </form>
+          <!------------  Поиск по сайту------------>
+
+
+          <button class="login-button" id="login-btn" type="button" value="off">Вход</button>
+          <!------------  Форма авторизации ------------>
+          <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="login-title">Личный кабинет</span>
+            <label class="for-login" for="login-target"><span class="visually-hidden">Логин для входа в личный кабинет
+                на сайте.</span></label>
+            <input class="login-line" placeholder="Введите логин" type="email" name="login-input" id="login-target"
+              autocomplete="off" required>
+
+            <label class="for-password" for="password-target"><span class="visually-hidden">Пароль для входа в личный
+                кабинет на сайте.</span></label>
+            <input class="password-line" placeholder="Введите пароль" type="password" name="password-input"
+              id="password-target" autocomplete="off" required>
+
+            <button type="submit">
+              Войти
+            </button>
+            <a class="login-link">Забыли пароль?</a>
+            <a class="login-link">Регистрация</a>
+          </form>
+          <!------------  Форма авторизации ------------>
+
+
+
+          <button class="basket-button" id="basket-btn" type="button" value="off"><span
+              class="visually-hidden">Корзина.</span>2
+            товара</button>
+          <!------------  Корзина ------------>
+          <div class="basket-form" role="dialog" id="prebasket">
+            <span class="basket-title">Корзина</span>
+            <ul class="basket-list">
+              <li class="basket-item">
+                <a class="basket-item-link" href="">
+                  <img class="basket-pic" src="images/malinka-basket.png" width="46" height="46"
+                    alt="Мороженое со вкусом Малины">
+                  <div>
+                    <span class="basket-description">Малинка</span>
+                    <span class="basket-qty">1 кг х 310 ₽</span>
+                  </div>
+                </a>
+                <button class="delete-btn"><span class=visually-hidden>Удалить позицию из
+                    корзины.</span></button>
+              </li>
+              <li class="basket-item">
+                <a class="basket-item-link" href="">
+                  <img class="basket-pic" src="images/bublegum-basket.png" width="46" height="46"
+                    alt="Мороженое со вкусом Малины">
+                  <div>
+                    <span class="basket-description">Бабл-гам</span>
+                    <span class="basket-qty">1,5 кг х 320 ₽</span>
+                  </div>
+                </a>
+                <button class="delete-btn"><span class=visually-hidden>Удалить позицию из
+                    корзины.</span></button>
+              </li>
+            </ul>
+            <div>
+              <button class="open-basket-btn">Оформить заказ</button>
+              <span>Итого: 790 ₽</span>
+            </div>
+          </div>
+          <!------------  Корзина ------------>
+
         </div>
 
       </div>
@@ -46,83 +130,80 @@
 
       <h1 class="visually-hidden"> Интернет-магазин Глейси.</h1>
 
-
       <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ HERO БЛОК -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
       <section class="hero-section">
 
         <h2 class="visually-hidden"> Топовые продукты.</h2>
 
         <div class="slider-container">
-          <h3> Нежный пломбир с клубничным джемом</h3>
-          <input class="slider-check first" type="radio" name="slider-check" value="01" id="top-quadrocopter" checked>
-          <label class="slider-label first" for="top-quadrocopter"><span class="visually-hidden">Клубничное.</span></label>
+
+          <input class="slider-check first" type="radio" name="slider-check" value="1" id="top-strawberry" checked>
+          <label class="slider-label first" for="top-strawberry"><span
+              class="visually-hidden">Клубничное.</span></label>
+
           <!------------- ↓ ↓ СЛАЙД STRAWBERRY ↓ ↓----------->
           <div class="slider-content">
-            <div class="hero-image">
-              <img class="icecream-illustration" src="images/strawberry.png" width="306" height="507"
-                alt="Нежный пломбир с клубничным джемом.">
-            </div>
 
             <div class="hero-info">
 
+              <h3 class="hero-title"> Нежный пломбир<br> с клубничным джемом</h3>
 
+              <p class="hero-description">Натуральное мороженое из свежих сливок<br>
+                и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
 
-              <div class="hero-details">
-                <div class="hero-description">Натуральное мороженое из свежих сливок
-                  и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</div>
+              <a href="#" class="button">Заказать</a>
 
-                <a href="#" class="button">Заказать</a>
-
-              </div>
+            </div>
+            <div class="hero-image">
+              <img class="icecream-illustration" src="images/strawberry-hero.png" width="306" height="507"
+                alt="Нежный пломбир с клубничным джемом.">
             </div>
           </div>
           <!------------ ↑ ↑ СЛАЙД STRAWBERRY  ↑ ↑----------->
 
-
-          <h3>Сливочное мороженое со вкусом банана</h3>
-          <input class="slider-check second" type="radio" name="slider-check" value="02" id="top-bracelet">
-          <label class="slider-label second" for="top-bracelet" tabindex="0"> <span
-              class="visually-hidden">Банановое.</span></label>
+          <input class="slider-check second" type="radio" name="slider-check" value="2" id="top-banana">
+          <label class="slider-label second" for="top-banana"> <span class="visually-hidden">Банановое.</span></label>
 
           <!------------- ↓ ↓ СЛАЙД BANANA ↓ ↓----------->
           <div class="slider-content">
-            <div class="hero-image">
-              <img class="icecream-illustration" src="images/banana.png" width="306" height="507"
-                alt="Сливочное мороженое со вкусом банана.">
-            </div>
 
             <div class="hero-info">
 
-              <div class="hero-description">
-                Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.
-              </div>
+              <h3 class="hero-title">Сливочное мороженое со вкусом банана</h3>
+
+              <p class="hero-description">
+                Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий
+                летний день.
+              </p>
               <a href="#" class="button">Заказать</a>
 
-
+            </div>
+            <div class="hero-image">
+              <img class="icecream-illustration" src="images/banana-hero.png" width="306" height="507"
+                alt="Сливочное мороженое со вкусом банана.">
             </div>
           </div>
           <!----------- ↑ ↑ СЛАЙД BANANA ↑ ↑------------->
 
-
-          <h3>Карамельный пломбир с маршмеллоу</h3>
-          <input class="slider-check third" type="radio" name="slider-check" value="03" id="top-monopod">
-          <label class="slider-label third" for="top-monopod" tabindex="0"><span
-              class="visually-hidden">Карамельное.</span></label>
+          <input class="slider-check third" type="radio" name="slider-check" value="3" id="top-karamel">
+          <label class="slider-label third" for="top-karamel"><span class="visually-hidden">Карамельное.</span></label>
 
           <!---------- ↓ ↓ СЛАЙД KARAMEL ↓ ↓-------------->
           <div class="slider-content">
-            <div class="hero-image">
-              <img class="icecream-illustration" src="images/karamel.png" width="306" height="507"
-                alt="Карамельный пломбир с маршмеллоу">
-            </div>
 
             <div class="hero-info">
-                <div class="hero-description">
-                  Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.
-                </div>
-                <a href="#" class="button">Заказать</a>
 
-              </div>
+              <h3 class="hero-title">Карамельный пломбир<br> с маршмеллоу</h3>
+              <p class="hero-description">
+                Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех
+                возрастов.
+              </p>
+              <a href="#" class="button">Заказать</a>
+
+            </div>
+            <div class="hero-image">
+              <img class="icecream-illustration" src="images/karamel-hero.png" width="306" height="507"
+                alt="Карамельный пломбир с маршмеллоу">
             </div>
           </div>
           <!--------- ↑ ↑ СЛАЙД KARAMEL ↑ ↑--------------->
@@ -136,81 +217,132 @@
       <!--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ----------- HERO БЛОК -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑----------->
 
 
-<section class="promo">
+      <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ PROMO -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
+      <section class="promo">
 
-  <h2>Заказывайте мороженое и получайте подарки!</h2>
+        <h2 class="promo-title">Заказывайте мороженое и получайте подарки!</h2>
+        <div class="promo-list">
 
-</section>
+          <div class="promo-item">
+            <div class="promo-description">
+              <h3 class="promo-name">Малинка даром!</h3>
+              <p class="promo-details">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку
+                малинового варенья бесплатно.
+              </p>
+              <a href="#" class="button">Хочу подарок</a>
+            </div>
+            <img class="promo-illustration" src="images/raspberry-promo.png" width="219" height="268"
+              alt="Бесплатная малинка сыпется из рога изобилия.">
 
+          </div>
 
+          <div class="promo-item">
+            <div class="promo-description">
+              <h3 class="promo-name">Маршмеллоу даром!</h3>
+              <p class="promo-details">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно
+                бесплатно.
+              </p>
+              <a href="#" class="button">Хочу подарок</a>
+            </div>
+            <img class="promo-illustration" src="images/marshmallow-promo.png" width="219" height="268"
+              alt="Бесплатное маршмеллоу сыпется из рога изобилия.">
 
-<section class="bestsellers">
-
-  <h2>Попробуйте самые популярные вкусы нашего мороженого</h2>
-
-</section>
-
-
-
-
-<section class="advantages">
-
-  <h2>Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-
-</section>
-
-
-
-<section class="blog-subscription">
-
-  <h2>Блог и подписка</h2>
-
-</section>
-
-
-
-
-<section class="delivery">
-
-  <h2>Доставка любимого мороженого на дом</h2>
-
-</section>
+          </div>
 
 
+        </div>
 
-<section class="contacts-feedback">
+      </section>
 
-  <h2>Контакты и Обратная связь</h2>
-  <button class="feedback-btn" type="button">Форма обратной связи</button>
+      <!-------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ----------- PROMO -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑----------->
 
-</section>
 
+      <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ----------- BESTSELLERS -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
+      <section class="bestsellers">
+
+        <h2 class="bestsellers-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
+
+      </section>
+
+
+      <!--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ------------- BESTSELLERS -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑----------->
+
+
+      <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ ADVANTAGES -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
+
+      <section class="advantages">
+
+        <h2 class="advantages-title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного
+          производства на развес</h2>
+
+      </section>
+
+      <!--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -------------- ADVANTAGES -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑----------->
+
+
+      <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ SUBSCRIPTION -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
+
+
+
+
+      <section class="blog-subscription">
+
+        <h2>Блог и подписка</h2>
+
+      </section>
+
+
+      <!-------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ------------ SUBSCRIPTION -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑----------->
+
+
+      <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ DELIVERY ----------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
+
+      <section class="delivery">
+
+        <h2 class="delivery-title">Доставка любимого мороженого на дом</h2>
+
+      </section>
+
+      <!--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ --------------- DELIVERY -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------->
+
+
+
+      <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ FEEDBACK -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ --------------->
+
+      <section class="contacts-feedback">
+
+        <h2><span class="visually-hidden">Контакты и Обратная связь</span></h2>
+        <button class="feedback-btn" type="button">Форма обратной связи</button>
+
+      </section>
+      <!--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -------------- FEEDBACK -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------->
 
     </main>
 
 
- <!-- ===========↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓=============== F O O T E R =========================↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓========================= -->
+
+    <!-- ===========↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓=============== F O O T E R =========================↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓========================= -->
     <footer>
 
 
     </footer>
- <!-- =========== ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ =============== F O O T E R ======================== ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ====================== -->
+    <!-- =========== ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ =============== F O O T E R ======================== ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ====================== -->
 
 
-   <!---↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------  МОДАЛЬНОЕ   ОКНО  -------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------------------->
-   <div id="popupWin" class="modalwin">
+    <!---↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------  МОДАЛЬНОЕ   ОКНО  -------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------------------->
+    <div id="popupWin" class="modalwin">
 
-    <form class="feedback-form" id="feedback-window" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="modal-title">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <p>Мы обязательно ответим вам!</p>
-        <button class="close-button" type="button"> <span class="visually-hidden">Закрыть</span></button>
-      </div>
+      <form class="feedback-form" id="feedback-window" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="modal-title">
+          <h2 class="visually-hidden">Форма обратной связи</h2>
+          <p>Мы обязательно ответим вам!</p>
+          <button class="close-button" type="button"> <span class="visually-hidden">Закрыть</span></button>
+        </div>
         <button class="feedback-submit" type="submit">Отправить</button>
 
-    </form>
-  </div>
-  <div class="shadow"></div>
+      </form>
+    </div>
+    <div class="shadow"></div>
 
     <!--   ========================================================================================================  -->
     <script src="scripts/slider-master.js"></script>
