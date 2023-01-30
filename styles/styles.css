@@ -808,9 +808,375 @@ img {
 /*-------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ----------- PROMO -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
 
 
+/*-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ----------- BESTSELLERS -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------*/
+
+.bestsellers-title {
+  display: flex;
+  width: 527px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+  color: #2D3440;
+  padding: 0 321.5px;
+  margin: 0 auto;
+  margin-bottom: 107px;
+  flex-wrap: wrap;
+}
+
+.best-list {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+  gap: 30px;
+}
+
+.best-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  background-color: #FCFCFC;
+  border-radius: 8px;
+}
+
+.best-mask {
+  display: flex;
+  border-radius: 50%;
+  margin-top: -51px;
+  margin-bottom: 16px;
+}
+
+.best-title {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #2D3440;
+  padding: 0 40px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.best-description {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #565C66;
+  margin: 0;
+  padding: 0 40px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.price-basket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 190px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.best-price {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2D3440;
+}
+
+.best-basket {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #FF2F64;
+  background-image: url("../images/opened-cart.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ------------- BESTSELLERS -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
 
 
-/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------------  МОДАЛЬНОЕ  ОКНО  ----------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ --------------*/
+/*-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ ADVANTAGES -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -------------*/
+
+.advantages {
+  display: flex;
+  width: 1122px;
+  background-image: url("../images/waffles-background.svg");
+  background-size: cover;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.advantages-internal {
+  display: flex;
+  flex-direction: column;
+  width: 1122px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.advantages-title {
+  display: flex;
+  width: 995px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+  color: #2D3440;
+  padding: 56px 63.5px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: 505.5px 505.5px;
+  grid-template-rows: auto auto;
+  gap: 40px 32px;
+  grid-auto-flow: column dense;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 40px 56px 40px;
+}
+
+.advantages-item {
+  position: relative;
+  display: flex;
+  padding-left: 64px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #565C66;
+  flex-wrap: wrap;
+}
+
+.advantages-item::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 2px solid #2D3440;
+  box-sizing: border-box;
+}
+
+.advantages-item:nth-child(1):before {
+  background-image: url("../images/icecream-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.advantages-item:nth-child(2):before {
+  background-image: url("../images/leaf-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.advantages-item:nth-child(3):before {
+  background-image: url("../images/cow-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.advantages-item:nth-child(4):before {
+  background-image: url("../images/thermometer-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.advantages-point {
+  margin: 0;
+}
+
+
+
+/*--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -------------- ADVANTAGES -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
+
+
+/*-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ SUBSCRIPTION -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ----------*/
+
+
+.blog-subscription {
+  display: flex;
+  gap: 30px;
+}
+
+.blog-part {
+  display: flex;
+  flex-direction: column;
+  width: 303px;
+  padding: 32.59px 235px 67.15px 32px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  background-image: url("../images/blog-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.blog-title {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #565C66;
+  margin-bottom: 12.22px;
+  flex-wrap: wrap;
+}
+
+.blog-topic {
+  display: flex;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2D3440;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.subscription-wrapper {
+  display: flex;
+  width: 570px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  background-image: url("../images/subscription-background.svg");
+  background-size: cover;
+  padding: 6px;
+}
+
+.subscription-part {
+  display: flex;
+  width: 518px;
+  flex-direction: column;
+  padding: 26px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.subscription-action {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #565C66;
+  margin: 0;
+  margin-bottom: 42px;
+  flex-wrap: wrap;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field-line {
+  display: flex;
+  align-items: center;
+  width: 332px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.submit-button {
+ display: flex;
+ font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 16px;
+text-align: center;
+color: #FCFCFC;
+padding: 14px 32px;
+border-radius: 26px;
+background-color: #FF2F64;
+border: 0;
+flex-wrap: wrap;
+}
+
+/*-------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ------------ SUBSCRIPTION -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
+
+
+/*-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ DELIVERY ----------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -------------*/
+
+.delivery {
+display: flex;
+width: 1006px;
+gap: 135px;
+padding: 64px 64px 64px 100px;
+background-image: url("../images/delivery-background.jpg");
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.delivery-intro {
+  display: flex;
+  flex-direction: column;
+  width: 371px;
+
+}
+
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+
+}
+
+/*--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ --------------- DELIVERY ---------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------*/
+
+
+/*-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ FEEDBACK ----------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------------*/
+
+.contacts-feedback {
+  display: flex;
+  width: 343px;
+  padding: 64px 763px 64px 64px;
+  background-image: url("../images/feedback-bg.jpg");
+  background-size: cover;
+
+    border-radius: 16px;
+
+}
+
+/*--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -------------- FEEDBACK ----------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------*/
+
+
+
+/*----------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓--------------  МОДАЛЬНОЕ  ОКНО  -----------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ --------------*/
 
 
 .modalwin {

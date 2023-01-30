@@ -262,6 +262,65 @@
 
         <h2 class="bestsellers-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
 
+
+        <ul class="best-list">
+          <li class="best-item">
+            <div class="best-mask">
+              <img class="best-icecream" src="images/products/raspberry-icecream.png" width="168" height="168"
+                alt="Малиновое морожение.">
+            </div>
+            <span class="best-title">Малинка</span>
+            <p class="best-description">Сливочное мороженое с малиновым джемом</p>
+            <div class="price-basket">
+              <span class="best-price">310 ₽/кг</span>
+              <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+            </div>
+          </li>
+
+          <li class="best-item">
+            <div class="best-mask">
+              <img class="best-icecream" src="images/products/pistachio-icecream.png" width="168" height="168"
+                alt="Малиновое морожение.">
+            </div>
+            <span class="best-title">Фисташка</span>
+            <p class="best-description">Фисташковый пломбир с кусочками шоколада</p>
+            <div class="price-basket">
+              <span class="best-price">340 ₽/кг</span>
+              <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+            </div>
+          </li>
+
+          <li class="best-item">
+            <div class="best-mask">
+              <img class="best-icecream" src="images/products/blueberry-icecream.png" width="168" height="168"
+                alt="Малиновое морожение.">
+            </div>
+
+            <span class="best-title">Черника</span>
+            <p class="best-description">Крем-брюле<br> с черничным джемом</p>
+            <div class="price-basket">
+              <span class="best-price">330 ₽/кг</span>
+              <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+            </div>
+          </li>
+
+          <li class="best-item">
+            <div class="best-mask">
+              <img class="best-icecream" src="images/products/bubblegum-icecream.png" width="168" height="168"
+                alt="Малиновое морожение.">
+            </div>
+            <span class="best-title">Бабл-гам</span>
+            <p class="best-description">Ванильный пломбир<br> со сладкой посыпкой</p>
+            <div class="price-basket">
+              <span class="best-price">320 ₽/кг</span>
+              <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+            </div>
+
+          </li>
+
+
+        </ul>
+
       </section>
 
 
@@ -271,10 +330,40 @@
       <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ ADVANTAGES -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
 
       <section class="advantages">
+        <div class="advantages-internal">
+          <h2 class="advantages-title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного
+            производства на развес</h2>
 
-        <h2 class="advantages-title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного
-          производства на развес</h2>
+          <ul class="advantages-list">
 
+            <li class="advantages-item">
+              <p class="advantages-point">Всё наше мороженое изготавливается на собственном производстве с
+                использованием современного
+                оборудования и проверенных временем технологий.</p>
+            </li>
+
+            <li class="advantages-item">
+              <p class="advantages-point">Для приготовления мороженого используются сливки и молоко высочайшего
+                качества. Все ингредиенты<br>
+                и добавки произведены из натурального сырья.</p>
+            </li>
+
+            <li class="advantages-item">
+              <p class="advantages-point">Закупка ингредиентов производится только<br>
+                у проверенных фермерских хозяйств, с которыми<br>
+                нас связывает долговременное сотрудничество.</p>
+            </li>
+
+            <li class="advantages-item">
+              <p class="advantages-point">Доставка нашего мороженого осуществляется в специальном термопаке, который не
+                даёт мороженому растаять
+                и позволяет сохранить превосходный вкус.</p>
+            </li>
+
+          </ul>
+
+
+        </div>
       </section>
 
       <!--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -------------- ADVANTAGES -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑----------->
@@ -287,7 +376,34 @@
 
       <section class="blog-subscription">
 
-        <h2>Блог и подписка</h2>
+        <h2 class="visually-hidden">Блог и подписка</h2>
+
+        <div class="blog-part">
+          <span class="blog-title">Новое в нашем блоге</span>
+          <p class="blog-topic">10 способов сервировки фруктовых щербетов<br>
+            к столу</p>
+        </div>
+        <div class="subscription-wrapper">
+          <div class="subscription-part">
+            <p class="subscription-action">Подпишитесь на нашу сладкую рассылку и будьте всегда<br>
+              в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды.
+              Честно =)</p>
+
+            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post" id="sub-form">
+
+              <label class="visually-hidden" for="subscription-email">Адрес электронной почты для рассылки.</label>
+
+              <input class="field-line" type="email" placeholder="Ваш e-mail" size="129" name="subscription-email"
+                id="subscription-email" required>
+
+              <button class="submit-button" type="submit">
+                Отправить
+              </button>
+
+            </form>
+          </div>
+        </div>
+
 
       </section>
 
@@ -299,7 +415,47 @@
 
       <section class="delivery">
 
+        <div class="delivery-intro">
         <h2 class="delivery-title">Доставка любимого мороженого на дом</h2>
+        <p class="delivery-details">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на
+          дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+        </div>
+
+          <form class="delivery-form"  action="https://echo.htmlacademy.ru/" method="post">
+
+            <div class="modal-name-mail">
+              <div class="date-input">
+                <label class="modal-subtitle for-name" for="client-name"> Ваше имя: </label>
+                <input class="modal-name-input" type="text" size="100" placeholder="Введите имя" name="customer-name"
+                  id="client-name" required>
+              </div>
+
+              <div class="phone-input">
+                <label class="modal-subtitle for-mail" for="client-email">Ваш e-mail:</label>
+                <input class="modal-mail-input" type="email" size="100" placeholder="Введите e-mail" name="customer-email"
+                  id="client-email" required>
+                <span class="mail-error-msg">Забавный у вас адрес</span>
+              </div>
+            </div>
+
+            <div class="modal-goods-quantity">
+
+              <div class="goods-input">
+                <label class="modal-subtitle for-goods" for="goods-type"> Что нужно привезти: </label>
+
+                <input class="address-input" type="text" size="100" placeholder="В свободной форме" name="goods-list"
+                  id="goods-type" required>
+              </div>
+
+
+
+
+            </div>
+
+            <div class="modal-submit-button">
+              <button class="modal-send button" type="submit">Отправить</button>
+            </div>
+          </form>
 
       </section>
 

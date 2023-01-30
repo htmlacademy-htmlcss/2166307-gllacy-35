@@ -13,19 +13,19 @@ function updateActiveSlide(n) {
   // в зависимости от слайда (n), ставим на body соответсвующий background
   switch (n) {
     case -1:
-      document.querySelectorAll('.mybody')[0].style.setProperty("--background", "#FCC850");
+      document.body.style.setProperty("--background", "#FCC850");
       break;
     case 0:
-      document.querySelectorAll('.mybody')[0].style.setProperty("--background", "#FEAFC3");
+      document.body.style.setProperty("--background", "#FEAFC3");
       break;
     case 1:
-      document.querySelectorAll('.mybody')[0].style.setProperty("--background", "#69A9FF");
+      document.body.style.setProperty("--background", "#69A9FF");
       break;
     case 2:
-      document.querySelectorAll('.mybody')[0].style.setProperty("--background", "#FCC850");
+      document.body.style.setProperty("--background", "#FCC850");
       break;
     case 3:
-      document.querySelectorAll('.mybody')[0].style.setProperty("--background", "#FEAFC3");
+      document.body.style.setProperty("--background", "#FEAFC3");
       break;
   }
 
