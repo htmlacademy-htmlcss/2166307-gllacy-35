@@ -12,11 +12,165 @@
 
   <body>
 
-    <header> </header>
+    <!--- ========================================= HEADER ==================================================-->
+    <header>
+
+      <div class="header-wrapper">
+
+        <div class="nav-container">
+          <a class="logo-link" href="index.html">
+            <img class="gllacy-logo" src="images/gllacy-logo.svg" width="137" height="56"
+              alt="Логотип интернет магазина Глейси.">
+          </a>
+
+          <nav class="navigation">
+            <button class="catalog-button" id="catalog-btn" type="button" value="off">Каталог</button>
+            <!------------  Выпадающее меню Каталог------------>
+            <div class="catalog-menu">
+              <span class="catalog-novelties">Новинки</span>
+              <ul class="catalog-list">
+                <li class="catalog-item"><a class="catalog-link" href="">Сливочное</a></li>
+                <li class="catalog-item"><a class="catalog-link" href="">Щербеты</a></li>
+                <li class="catalog-item"><a class="catalog-link" href="">Фруктовый лед</a></li>
+                <li class="catalog-item"><a class="catalog-link" href="">Мелорин</a></li>
+              </ul>
+            </div>
+            <!------------  Выпадающее меню Каталог------------>
+            <a class="navigation-item" href="">Доставка и оплата</a>
+            <a class="navigation-item" href="">О компании</a>
+          </nav>
+
+        </div>
+
+        <div class="user-menu">
+          <a class="contact-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          <button class="search-button" id="search-btn" type="button" value="off"><span class="visually-hidden">Поиск по
+              сайту.</span></button>
+          <!------------  Поиск по сайту------------>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="for-search" for="search-target"><span class="visually-hidden">Поиск по сайту.</span></label>
+            <input class="search-line" placeholder="Поиск по сайту" type="text" name="search-request" id="search-target"
+              autocomplete="off" required>
+          </form>
+          <!------------  Поиск по сайту------------>
+
+
+          <button class="login-button" id="login-btn" type="button" value="off">Вход</button>
+          <!------------  Форма авторизации ------------>
+          <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="login-title">Личный кабинет</span>
+            <label class="for-login" for="login-target"><span class="visually-hidden">Логин для входа в личный кабинет
+                на сайте.</span></label>
+            <input class="login-line" placeholder="Введите логин" type="email" name="login-input" id="login-target"
+              autocomplete="off" required>
+
+            <label class="for-password" for="password-target"><span class="visually-hidden">Пароль для входа в личный
+                кабинет на сайте.</span></label>
+            <input class="password-line" placeholder="Введите пароль" type="password" name="password-input"
+              id="password-target" autocomplete="off" required>
+
+            <button type="submit">
+              Войти
+            </button>
+            <a class="login-link">Забыли пароль?</a>
+            <a class="login-link">Регистрация</a>
+          </form>
+          <!------------  Форма авторизации ------------>
+
+
+
+          <button class="basket-button" id="basket-btn" type="button" value="off"><span
+              class="visually-hidden">Корзина.</span>2
+            товара</button>
+          <!------------  Корзина ------------>
+          <div class="basket-form" role="dialog" id="prebasket">
+            <span class="basket-title">Корзина</span>
+            <ul class="basket-list">
+              <li class="basket-item">
+                <a class="basket-item-link" href="">
+                  <img class="basket-pic" src="images/malinka-basket.png" width="46" height="46"
+                    alt="Мороженое со вкусом Малины">
+                  <div>
+                    <span class="basket-description">Малинка</span>
+                    <span class="basket-qty">1 кг х 310 ₽</span>
+                  </div>
+                </a>
+                <button class="delete-btn"><span class=visually-hidden>Удалить позицию из
+                    корзины.</span></button>
+              </li>
+              <li class="basket-item">
+                <a class="basket-item-link" href="">
+                  <img class="basket-pic" src="images/bublegum-basket.png" width="46" height="46"
+                    alt="Мороженое со вкусом Малины">
+                  <div>
+                    <span class="basket-description">Бабл-гам</span>
+                    <span class="basket-qty">1,5 кг х 320 ₽</span>
+                  </div>
+                </a>
+                <button class="delete-btn"><span class=visually-hidden>Удалить позицию из
+                    корзины.</span></button>
+              </li>
+            </ul>
+            <div>
+              <button class="open-basket-btn">Оформить заказ</button>
+              <span>Итого: 790 ₽</span>
+            </div>
+          </div>
+          <!------------  Корзина ------------>
+
+        </div>
+
+      </div>
+
+    </header>
 
     <main></main>
 
-    <footer></footer>
+
+    <!-- ===========↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓=============== F O O T E R =========================↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓========================= -->
+    <footer class="footer-container">
+
+      <div class="social-networks">
+      <a href="https://t.me/htmlacademy" class="social-link"></a>
+      <a href="https://vk.com/htmlacademy" class="social-link"></a>
+      <a href="https://www.youtube.com/user/htmlacademyru" class="social-link"></a>
+
+      </div>
+
+      <div class="footer-menu">
+        <ul class="footer-list">
+
+          <li class="footer-item">
+            <a class="footer-link">Для поставщиков</a>
+          </li>
+
+          <li class="footer-item">
+            <a class="footer-link">Наши документы</a>
+          </li>
+
+          <li class="footer-item">
+            <a class="footer-link">О производстве</a>
+          </li>
+
+          <li class="footer-item">
+            <a class="footer-link">Экологические стандарты</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="academy-stamp">
+        <a class="logo-link" href="https://htmlacademy.ru/">
+          <img class="htmlacademy-logo" src="images/htmlacademy-logo.svg" width="93" height="27"
+            alt="Логотип интернет магазина Глейси.">
+        </a>
+        <p class="made-in">Сделано в<a class="contact-phone academy-link"> .html academy </a> © 2021</p>
+      </div>
+
+
+          </footer>
+          <!-- =========== ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ =============== F O O T E R ======================== ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ====================== -->
+
 
     </body>
 
