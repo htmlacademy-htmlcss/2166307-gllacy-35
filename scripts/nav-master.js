@@ -184,7 +184,7 @@ document.querySelector('.login-button').style.setProperty("--opacity-active", "1
 document.querySelector('.login-button').style.setProperty("--border", "2px solid #2D3440");
 
 //закрываем поиск, если он открыт
-document.querySelector('.search-form')[0].style.setProperty("--display", "none");
+document.querySelector('.search-form').style.setProperty("--display", "none");
 document.getElementById("search-btn").value="off";
  document.querySelector('.search-button').style.setProperty("--background-color", "rgba(252, 252, 252, 0.3)");
  document.querySelector('.search-button').style.setProperty("--background-image", "url('../images/search-icon.svg')");
@@ -196,7 +196,7 @@ document.getElementById("search-btn").value="off";
 
 }
 else {
-document.querySelector('.basket-form')[0].style.setProperty("--display", "none");
+document.querySelector('.basket-form').style.setProperty("--display", "none");
 document.getElementById("basket-btn").value="off";
 
 //все св-ва возвращаем на исходные позиции
