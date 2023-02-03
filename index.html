@@ -588,12 +588,26 @@
     <div id="popupWin" class="modalwin">
 
       <form class="feedback-form" id="feedback-window" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="modal-title">
+
           <h2 class="visually-hidden">Форма обратной связи</h2>
-          <p>Мы обязательно ответим вам!</p>
+
           <button class="close-button" type="button"> <span class="visually-hidden">Закрыть</span></button>
-        </div>
-        <button class="feedback-submit" type="submit">Отправить</button>
+
+          <p class="promise">Мы обязательно ответим вам!</p>
+
+            <label class="surname-label" for="customer-surname"><span class="visually-hidden"> Текст сообщения.</span> </label>
+            <input class="surname-input" type="text" size="50" placeholder="Имя и фамилия"
+              name="surname-of-customer" id="customer-surname" required>
+
+            <label class="email-label" for="customer-email"><span class="visually-hidden">Почта для обратной связи.</span></label>
+            <input class="email-input" type="email" placeholder="email@example.com" size="129"
+             name="email-of-customer" id="customer-email" required>
+
+            <label class="message-label" for="customer-message"><span class="visually-hidden"> Текст сообщения.</span> </label>
+            <textarea class="message-input" type="text" size="200" placeholder="В свободной форме"
+             name="message-of-customer" id="customer-message" required></textarea>
+
+        <button class="submit-button feedback-submit" type="submit">Отправить</button>
 
       </form>
     </div>
