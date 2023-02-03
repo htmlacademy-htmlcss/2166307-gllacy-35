@@ -1831,7 +1831,6 @@ img {
   width: 683px;
   margin: 0 auto;
   padding: 38px 0 77px 487px;
-  background-color: darkgray;
 }
 
 .pagination::after {
@@ -1856,41 +1855,166 @@ img {
   align-items: center;
   width: 120px;
   list-style-type: none;
-  padding: 0;
+  padding: 0 24px;
   margin: 0;
-  background-color: burlywood;
   flex-wrap: wrap;
 }
 
 .pagination-item {
   display: flex;
   align-items: center;
-  padding: 2px 7px;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
   flex-wrap: wrap;
+  transition: 0.4s;
 }
 
+/*
+.pagination-item:hover {
+  background: rgba(252, 252, 252, 0.5);
+  border-radius: 50px;
+}
+
+.pagination-item:focus-visible {
+  background: rgba(252, 252, 252, 0.3);
+  border: 1px solid #2D3440;
+  border-radius: 50px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.pagination-item:active {
+  background: rgba(252, 252, 252, 0.5);
+  border: 1px solid #FCFCFC;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+.active-item,
+.active-item:hover,
+.active-item:focus-visible,
+.active-item:active {
+  background: #FCFCFC;
+  border-radius: 50px;
+}
+*/
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
+  text-decoration: none;
+}
+
+.active-link {
+  background: #FCFCFC;
+  border-radius: 50px;
+  cursor: default;
+}
+
+.pagination-link:hover {
+  background: rgba(252, 252, 252, 0.5);
+  border-radius: 50px;
+}
+
+.pagination-link:focus-visible {
+  background: rgba(252, 252, 252, 0.3);
+  border: 1px solid #2D3440;
+  border-radius: 50px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.pagination-link:active {
+  background: rgba(252, 252, 252, 0.5);
+  border: 1px solid #FCFCFC;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+.active-link,
+.active-link:hover,
+.active-link:focus-visible,
+.active-link:active {
+  background: #FCFCFC;
+  border-radius: 50px;
+  outline: none;
+  cursor: default;
+}
+
+
 .back-btn {
+  position: absolute;
   display: flex;
   width: 16px;
+  height: 16px;
+  top: 56px;
+  right: 152px;
   padding: 0;
-  padding-right: 8px;
   border: 0;
   background-image: url("../images/left-arrow.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #7547a8;
 }
 
 .forward-btn {
+  position: absolute;
   display: flex;
   width: 16px;
+  height: 16px;
+  top: 56px;
+  right: 0;
   padding: 0;
-  padding-left: 8px;
+  padding-right: 0;
   border: 0;
   background-image: url("../images/right-arrow.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #7547a8;
 }
+
+.forward-btn:hover,
+.back-btn:hover {
+  opacity: 0.6;
+}
+
+.forward-btn:focus-visible,
+.back-btn:focus-visible {
+  outline: none;
+}
+
+.forward-btn:focus-visible::before,
+.back-btn:focus-visible::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  left: -4px;
+  top: -4px;
+  border: 2px solid #2D3440;
+}
+
+.forward-btn:active,
+.back-btn:active {
+  opacity: 0.3;
+}
+
+.disabled-btn:hover,
+.disabled-btn:focus-visible,
+.disabled-btn:active {
+opacity: 1;
+border: 0;
+outline: none;
+cursor: default;
+}
+
 
 /*----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   CATALOG PRODUCTS  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------------------------------*/
