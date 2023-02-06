@@ -1402,12 +1402,15 @@ img {
 .social-networks {
   display: flex;
   align-items: center;
-  gap: 16px 14px;
+  gap: 16px 12px;
   width: 108px;
   min-height: 28px;
+  padding: 0;
+  margin: 0;
+  margin-left: 3.2px;
   padding-right: 96px;
   margin-bottom: auto;
-  margin-left: 3.2px;
+  list-style-type: none;
 }
 
 .social-link {
@@ -1751,7 +1754,6 @@ img {
 
 .breadcrumbs-item {
   display: flex;
-  /* margin-right: 28px;*/
 }
 
 .breadcrumbs-item:not(:first-child)::before {
@@ -1762,7 +1764,21 @@ img {
   background-image: url("../images/breadcrumbs-arrow.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  /*margin-right: 16px;*/
+}
+
+.breadcrumbs-item:last-child {
+  position: relative;
+}
+
+.breadcrumbs-item:last-child > .breadcrumbs-link::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(100%);
+  height: 1px;
+  top: 19.5px;
+  right: -1px;
+  background-color: #2D3440;
 }
 
 .breadcrumbs-link {
@@ -1794,7 +1810,8 @@ img {
   height: calc(100% + 4px);
   top: -4px;
   left: -4px;
-  border: 2px solid #AF4FFF;
+  border: 2px solid #2D3440;
+  ;
 }
 
 .breadcrumbs-link:active {
@@ -1805,19 +1822,6 @@ img {
 /*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------Catalog header & Breadcrumbs -----------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------------*/
 
 
-
-/*------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   CATALOG FILTER  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------------------------------*/
-
-.filter {
-  display: flex;
-  width: 1170px;
-  height: 148px;
-  background-color: aquamarine;
-  margin: 0 auto;
-  margin-bottom: 95px;
-}
-
-/*-------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ CATALOG FILTER  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------------------------------*/
 
 /*----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   CATALOG PRODUCTS  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ----------------------------------*/
 
@@ -1869,36 +1873,6 @@ img {
   flex-wrap: wrap;
   transition: 0.4s;
 }
-
-/*
-.pagination-item:hover {
-  background: rgba(252, 252, 252, 0.5);
-  border-radius: 50px;
-}
-
-.pagination-item:focus-visible {
-  background: rgba(252, 252, 252, 0.3);
-  border: 1px solid #2D3440;
-  border-radius: 50px;
-  box-sizing: border-box;
-  outline: none;
-}
-
-.pagination-item:active {
-  background: rgba(252, 252, 252, 0.5);
-  border: 1px solid #FCFCFC;
-  border-radius: 50px;
-  box-sizing: border-box;
-}
-
-.active-item,
-.active-item:hover,
-.active-item:focus-visible,
-.active-item:active {
-  background: #FCFCFC;
-  border-radius: 50px;
-}
-*/
 
 .pagination-link {
   display: flex;
@@ -2010,11 +1984,645 @@ img {
 .disabled-btn:hover,
 .disabled-btn:focus-visible,
 .disabled-btn:active {
-opacity: 1;
-border: 0;
-outline: none;
-cursor: default;
+  opacity: 1;
+  border: 0;
+  outline: none;
+  cursor: default;
 }
 
 
 /*----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   CATALOG PRODUCTS  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------------------------------*/
+
+/*---------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------ФИЛЬТР КАТАЛОГА ----------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓--------------*/
+
+
+.filter {
+  display: flex;
+  width: 1170px;
+  height: 148px;
+  margin: 0 auto;
+  margin-bottom: 95px;
+}
+
+.line1 {
+  display: flex;
+  width: 1170px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.line2 {
+  display: flex;
+  width: 1170px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.area-title {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  margin: 0;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.area-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-options,
+.slider-container1{
+  display: flex;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
+  padding: 0 16px;
+}
+
+.filter-fatness,
+.filter-additives {
+  display: flex;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
+  padding: 0 24px;
+}
+
+.filter-submit {
+  margin-top: auto;
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 52.5px;
+  color: #2D3440;
+  cursor: pointer;
+}
+
+
+.catalog-wrapper {
+  display: flex;
+  width: 100%;
+  background-color: #F0F0F0;
+}
+
+.catalog-filter {
+  display: flex;
+  flex-direction: column;
+  width: 1170px;
+  gap: 15px
+}
+
+.filter-additives {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.filter-fatness {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  align-items: center;
+  gap: 16px;
+}
+
+
+/* --- ↓ ↓ ↓ -----кастомизация чекбоксов и радио в Фильтре каталога ----- ↓ ↓ ↓ -----*/
+
+.additive-checkbox,
+.fatness-radio {
+  position: relative;
+  align-items: center;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  padding: 9px 0;
+  cursor: pointer;
+  outline: none;
+  transition: 0.4s;
+  flex-wrap: wrap;
+}
+
+.additive-input,
+.fatness-input {
+  display: block;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+
+.additive-checkbox::before {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: -36px;
+  display: block;
+  height: 14.66px;
+  width: 14.66px;
+  border-radius: 3px;
+  border: 1.33333px solid #2D3440;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.fatness-radio::before {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: -36px;
+  display: block;
+  height: 14.66px;
+  width: 14.66px;
+  border-radius: 50%;
+  border: 1.33333px solid #2D3440;
+  cursor: pointer;
+}
+
+.additive-input.chocolate-box:checked ~ .additive-checkbox.chocolate-box::before,
+.additive-input.sugar-box:checked ~ .additive-checkbox.sugar-box::before,
+.additive-input.fruits-box:checked ~ .additive-checkbox.fruits-box::before,
+.additive-input.syrups-box:checked ~ .additive-checkbox.syrups-box::before,
+.additive-input.jams-box:checked ~ .additive-checkbox.jams-box::before {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: -36px;
+  display: block;
+  background-image: url("../images/checked-true.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 14.66px;
+  width: 14.66px;
+  border-radius: 3px;
+  border: 1.33333px solid #2D3440;
+}
+
+.additive-input.chocolate-box:hover ~ .additive-checkbox.chocolate-box,
+.additive-input.sugar-box:hover ~ .additive-checkbox.sugar-box,
+.additive-input.fruits-box:hover ~ .additive-checkbox.fruits-box,
+.additive-input.syrups-box:hover ~ .additive-checkbox.syrups-box,
+.additive-input.jams-box:hover ~ .additive-checkbox.jams-box {
+  opacity: 0.6;
+}
+
+.additive-input.chocolate-box:focus-visible ~ .additive-checkbox.chocolate-box::after,
+.additive-input.sugar-box:focus-visible ~ .additive-checkbox.sugar-box::after,
+.additive-input.fruits-box:focus-visible ~ .additive-checkbox.fruits-box::after,
+.additive-input.syrups-box:focus-visible ~ .additive-checkbox.syrups-box::after,
+.additive-input.jams-box:focus-visible ~ .additive-checkbox.jams-box::after {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 10px;
+  left: -39px;
+  height: 22px;
+  width: 22px;
+  border: 2px solid #AF4FFF;
+}
+
+.additive-input.chocolate-box:active ~ .additive-checkbox.chocolate-box,
+.additive-input.sugar-box:active ~ .additive-checkbox.sugar-box,
+.additive-input.fruits-box:active ~ .additive-checkbox.fruits-box,
+.additive-input.syrups-box:active ~ .additive-checkbox.syrups-box,
+.additive-input.jams-box:active ~ .additive-checkbox.jams-box {
+  opacity: 0.3;
+}
+
+.additive-input.chocolate-box:disabled ~ .additive-checkbox.chocolate-box,
+.additive-input.sugar-box:disabled ~ .additive-checkbox.sugar-box,
+.additive-input.fruits-box:disabled ~ .additive-checkbox.fruits-box,
+.additive-input.syrups-box:disabled ~ .additive-checkbox.syrups-box,
+.additive-input.jams-box:disabled ~ .additive-checkbox.jams-box {
+  opacity: 0.1;
+  cursor: default;
+}
+
+.fatness-input.zero-radio:checked ~ .fatness-radio.zero-radio::before,
+.fatness-input.ten-radio:checked ~ .fatness-radio.ten-radio::before,
+.fatness-input.thirty-radio:checked ~ .fatness-radio.thirty-radio::before,
+.fatness-input.over-radio:checked ~ .fatness-radio.over-radio::before {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: -36px;
+  display: block;
+  background-image: url("../images/radio-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 14.66px;
+  width: 14.66px;
+  border-radius: 50%;
+  border: 1.33333px solid #2D3440;
+}
+
+.fatness-input.zero-radio:hover ~ .fatness-radio.zero-radio,
+.fatness-input.ten-radio:hover ~ .fatness-radio.ten-radio,
+.fatness-input.thirty-radio:hover ~ .fatness-radio.thirty-radio,
+.fatness-input.over-radio:hover ~ .fatness-radio.over-radio {
+  opacity: 0.6;
+}
+
+.fatness-input.zero-radio:focus-visible ~ .fatness-radio.zero-radio::after,
+.fatness-input.ten-radio:focus-visible ~ .fatness-radio.ten-radio::after,
+.fatness-input.thirty-radio:focus-visible ~ .fatness-radio.thirty-radio::after,
+.fatness-input.over-radio:focus-visible ~ .fatness-radio.over-radio::after {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: -39px;
+  display: block;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  border: 2px solid #AF4FFF;
+}
+
+.fatness-input.zero-radio:active ~ .fatness-radio.zero-radio,
+.fatness-input.ten-radio:active ~ .fatness-radio.ten-radio,
+.fatness-input.thirty-radio:active ~ .fatness-radio.thirty-radio,
+.fatness-input.over-radio:active ~ .fatness-radio.over-radio {
+  opacity: 0.3;
+}
+
+.fatness-input.zero-radio:disabled ~ .fatness-radio.zero-radio,
+.fatness-input.ten-radio:disabled ~ .fatness-radio.ten-radio,
+.fatness-input.thirty-radio:disabled ~ .fatness-radio.thirty-radio,
+.fatness-input.over-radio:disabled ~ .fatness-radio.over-radio {
+  opacity: 0.1;
+  cursor: default;
+}
+
+/* -----↑ ↑ ↑-------кастомизация чекбоксов и радио в Фильтре каталога ------↑ ↑ ↑-----*/
+
+.filter-area-title {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  margin: 0;
+  padding: 12px 0 16.5px 0;
+  flex-wrap: wrap;
+}
+
+.catalog-filter-area {
+  display: flex;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+
+
+/*--↓ ↓ ↓----double range slider ----------↓ ↓ ↓----------*/
+
+.slider-container1 {
+  display: flex;
+  width: 200px;
+}
+
+.double-slider-wrapper {
+
+  width: 218px;
+  background: transparent;
+}
+
+.price-input {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 84px 84px;
+  gap: 20px;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.field:focus-within::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 80%;
+  height: 90%;
+  left: -4px;
+  border: 2px solid #AF4FFF;
+}
+
+.input-min::-webkit-outer-spin-button,
+.input-max::-webkit-outer-spin-button,
+.input-min::-webkit-inner-spin-button,
+.input-max::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.from-to,
+.up-to {
+  margin-right: 4.5px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(0, 0, 0, 0.3);
+}
+
+.input-min,
+.input-max {
+  display: flex;
+  width: 44px;
+  border: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(0, 0, 0, 0.3);
+  background-color: #F0F0F0;
+  outline: none;
+}
+
+.double-slider {
+  height: 2px;
+  /*тощина  полосы-подкладки слайдера*/
+  position: relative;
+  background: #DCDCDC;
+  /*цвет полосы-подкладки слайдера*/
+}
+
+.double-slider .progress {
+  height: 2px;
+  /*тощина основной полосы слайдера*/
+  left: 0%;
+  /*начальная установка основной полосы слайдера*/
+  right: 50%;
+  /*начальная установка основной полосы слайдера*/
+  position: absolute;
+  border-radius: 5px;
+  background: #000000;
+  /*цвет полосы слайдера*/
+}
+
+.range-input {
+  position: relative;
+}
+
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -3.5px;
+  left: 0;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.range-min {
+  margin: 0;
+}
+
+.range-max {
+  margin: 0;
+}
+
+.range-min:focus-visible {
+  outline: none;
+}
+
+.range-max:focus-visible {
+  outline: none;
+}
+
+.range-min:focus-visible::after {
+  position: absolute;
+  content: '';
+  display: var(--display, block);
+  width: 20px;
+  height: 20px;
+  top: -9.5px;
+  left: -3px;
+  border: 2px solid #AF4FFF;
+}
+
+.range-max:focus-visible::after {
+  position: absolute;
+  content: '';
+  display: var(--display, block);
+  width: 20px;
+  height: 20px;
+  top: -9.5px;
+  left: 97px;
+  border: 2px solid #AF4FFF;
+}
+
+.range-min::-webkit-slider-thumb,
+.range-max::-webkit-slider-thumb {
+  /* стилизация плашки */
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #F0F0F0;
+  border: 2px solid #000000;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.range-min::-webkit-slider-thumb:hover,
+.range-max::-webkit-slider-thumb:hover {
+  border: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+.range-min::-webkit-slider-thumb:focus-visible,
+.range-max::-webkit-slider-thumb:focus-visible {
+  outline: none;
+}
+
+.range-min::-webkit-slider-thumb:focus-visible,
+.range-max::-webkit-slider-thumb:focus-visible {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: -4px;
+  left: -4px;
+  border: 2px solid #AF4FFF;
+}
+
+.range-min::-webkit-slider-thumb:active,
+.range-max::-webkit-slider-thumb:active {
+  border: 2px solid rgb(0, 0, 0, 0.5);
+  background-color: #000000;
+}
+
+.range-min::-moz-range-thumb,
+.range-max::-moz-range-thumb {
+  /* стилизация плашки */
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #F0F0F0;
+  border: 2px solid #000000;
+  pointer-events: auto;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.range-min::-moz-range-thumb:hover,
+.range-max::-moz-range-thumb:hover {
+  border: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+.range-min::-moz-range-thumb:focus-visible,
+.range-max::-moz-range-thumb:focus-visible {
+  outline: none;
+}
+
+.range-min::-moz-range-thumb:focus-visible,
+.range-max::-moz-range-thumb:focus-visible {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: -4px;
+  left: -4px;
+  border: 2px solid #AF4FFF;
+}
+
+.range-min::-moz-range-thumb:active,
+.range-max::-moz-range-thumb:active {
+  border: 2px solid rgb(0, 0, 0, 1);
+  background-color: #000000;
+}
+
+
+/*--↑ ↑ ↑----double range slider ----------↑ ↑ ↑----------*/
+
+
+/* ---- ↓ ↓ ↓ -------Кастомизация SELECT------- ↓ ↓ ↓ ---------*/
+
+.goods-options > select {
+  position: relative;
+  /* background-color: transparent;*/
+  display: flex;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+  border: 0;
+  width: 0.01px;
+  height: 0.01px;
+  margin: -0.01px;
+}
+
+select option {
+  background-color: rgb(151, 195, 231);
+  color: gray;
+  width: 164px;
+  padding: 16px 8px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+select option:hover {
+  padding-left: 25px;
+  color: #000000;
+  background-color: rgb(206, 206, 206);
+}
+
+.product-options-item {
+  display: flex;
+  align-items: center;
+  border-left: 2px solid rgb(206, 206, 206);
+  border-right: 2px solid rgb(206, 206, 206);
+}
+
+.goods-options {
+  position: relative;
+  display: flex;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+  align-items: center;
+  width: 196px;
+  flex-wrap: wrap;
+  transition: 0.4s;
+}
+
+.goods-options:focus-within::after {
+  position: absolute;
+  content: '';
+  display: block;
+  align-items: center;
+  width: 146px;
+  height: 34px;
+  top: 16px;
+  left: -4px;
+  transition: 0.4s;
+  border: 2px solid #AF4FFF;
+}
+
+.product-options {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  background-color: #F0F0F0;
+  cursor: pointer;
+  appearance: none;
+  /*      Убираем стандартную стрелку*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: 0.4s;
+  z-index: 3;
+}
+
+.product-options::before {
+  /* Добавляем кастомную стрелку*/
+  position: absolute;
+  content: '';
+  display: block;
+  top: -15px;
+  left: 113px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/select-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.product-options:hover {
+  color: rgb(0, 0, 0, 0.6)
+}
+
+.product-options:focus-visible {
+  outline: none;
+}
+
+/* ------ ↑ ↑ ↑-----Кастомизация SELECT--------- ↑ ↑ ↑-------*/
+
+
+
+/*--------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------ФИЛЬТР КАТАЛОГА -----------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------*/
