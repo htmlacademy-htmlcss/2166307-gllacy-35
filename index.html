@@ -428,6 +428,7 @@
                   Отправить
                 </button>
               </form>
+              </div>
           </li>
 
         </ul>
@@ -457,14 +458,12 @@
           <div class="date-phone">
             <div class="order-date">
               <label class="date-label" for="delivery-date"> Дата </label>
-              <input class="date-input" type="data" size="10" placeholder="01.04.2020" name="date-of-delivery"
-                id="delivery-date" required>
+              <input class="date-input" type="date" value="2020-04-01" name="date-of-delivery" id="delivery-date" required>
             </div>
 
             <div class="order-phone">
               <label class="phone-label" for="customer-phone">Телефон</label>
-              <input class="phone-input" type="phone" size="20" placeholder="+7 800 999-00-00" name="phone-of-customer"
-                id="customer-phone" required>
+              <input class="phone-input" type="tel" size="20" placeholder="+7 800 999-00-00" name="phone-of-customer" id="customer-phone" required>
             </div>
           </div>
 
@@ -601,7 +600,7 @@
 
         <label class="message-label" for="customer-message"><span class="visually-hidden"> Текст сообщения.</span>
         </label>
-        <textarea class="message-input" type="text" size="200" placeholder="В свободной форме"
+        <textarea class="message-input" maxlength="200" placeholder="В свободной форме"
           name="message-of-customer" id="customer-message" required></textarea>
 
         <button class="submit-button feedback-submit" type="submit">Отправить</button>

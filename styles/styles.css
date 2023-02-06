@@ -202,6 +202,7 @@ img {
   border-radius: 4px;
   background-color: #FCFCFC;
   animation: fadeInFromNone 0.6s ease-in-out;
+  z-index: 1;
 }
 
 .catalog-novelties {
@@ -1266,7 +1267,25 @@ img {
   margin-bottom: 32px;
 }
 
-.date-input[placeholder],
+.date-input[value] {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B9B9B9;
+  padding: 0;
+  text-align: center;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  display: block;
+  width: 110px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .phone-input[placeholder],
 .address-input[placeholder] {
   font-family: 'Inter', sans-serif;
@@ -1275,11 +1294,6 @@ img {
   line-height: 20px;
   color: #B9B9B9;
   padding: 0 16px 0 16px;
-}
-
-.date-input[placeholder] {
-  padding: 0;
-  text-align: center;
 }
 
 .date-input,
@@ -2027,6 +2041,7 @@ img {
   color: #2D3440;
   margin: 0;
   margin-bottom: 8px;
+  padding-left: 16px;
   flex-wrap: wrap;
 }
 
@@ -2036,8 +2051,10 @@ img {
 }
 
 .goods-options,
-.slider-container1{
+.slider-container1 {
   display: flex;
+  width: 164px;
+  height: 35.5px;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 18px;
   padding: 0 16px;
@@ -2076,19 +2093,17 @@ img {
   display: flex;
   flex-direction: column;
   width: 1170px;
-  gap: 15px
+  gap: 16.5px
 }
 
 .filter-additives {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
 }
 
 .filter-fatness {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto;
+  display: flex;
   align-items: center;
   gap: 16px;
 }
@@ -2106,26 +2121,30 @@ img {
   font-size: 14px;
   line-height: 20px;
   color: #2D3440;
-  padding: 9px 0;
+  padding: 10px 0;
   cursor: pointer;
   outline: none;
   transition: 0.4s;
   flex-wrap: wrap;
 }
 
+.fatness-radio {
+  padding: 8px 0;
+}
+
 .additive-input,
 .fatness-input {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 14.66px;
+  height: 14.66px;
   opacity: 0;
 }
 
 .additive-checkbox::before {
   position: absolute;
   content: '';
-  top: 10px;
-  left: -36px;
+  top: 11.5px;
+  left: -26px;
   display: block;
   height: 14.66px;
   width: 14.66px;
@@ -2155,8 +2174,8 @@ img {
 .additive-input.jams-box:checked ~ .additive-checkbox.jams-box::before {
   position: absolute;
   content: '';
-  top: 10px;
-  left: -36px;
+  top: 11.5px;
+  left: -26px;
   display: block;
   background-image: url("../images/checked-true.svg");
   background-repeat: no-repeat;
@@ -2329,36 +2348,46 @@ img {
   -webkit-appearance: none;
 }
 
-.from-to,
 .up-to {
+  position: absolute;
+  top: -29px;
+  left: 0;
   margin-right: 4.5px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: rgb(0, 0, 0, 0.3);
+  color: #2D3440;
 }
 
 .input-min,
 .input-max {
+  position: absolute;
   display: flex;
   width: 44px;
   border: 0;
   padding: 0;
-  font-family: "Rubik", sans-serif;
+  top: -29px;
+  left: 55px;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: rgb(0, 0, 0, 0.3);
-  background-color: #F0F0F0;
+  color: #2D3440;
+  background-color: #FEAFC3;
   outline: none;
+}
+
+.input-max {
+  left: 30px;
 }
 
 .double-slider {
   height: 2px;
   /*тощина  полосы-подкладки слайдера*/
   position: relative;
-  background: #DCDCDC;
+  top: 16px;
+  background: rgba(86, 92, 102, 0.3);
   /*цвет полосы-подкладки слайдера*/
 }
 
@@ -2371,7 +2400,7 @@ img {
   /*начальная установка основной полосы слайдера*/
   position: absolute;
   border-radius: 5px;
-  background: #000000;
+  background: rgba(86, 92, 102, 1);
   /*цвет полосы слайдера*/
 }
 
@@ -2383,7 +2412,7 @@ img {
   position: absolute;
   width: 100%;
   height: 5px;
-  top: -3.5px;
+  top: 12.5px;
   left: 0;
   background: none;
   pointer-events: none;
@@ -2433,11 +2462,11 @@ img {
 .range-max::-webkit-slider-thumb {
   /* стилизация плашки */
   position: relative;
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   border-radius: 50%;
-  background: #F0F0F0;
-  border: 2px solid #000000;
+  background: #FCFCFC;
+  border: 5px solid #2D3440;
   pointer-events: auto;
   -webkit-appearance: none;
   cursor: pointer;
@@ -2561,7 +2590,7 @@ select option:hover {
   background: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
   align-items: center;
-  width: 196px;
+  width: 164px;
   flex-wrap: wrap;
   transition: 0.4s;
 }
