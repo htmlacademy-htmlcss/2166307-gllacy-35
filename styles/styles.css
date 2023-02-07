@@ -738,6 +738,7 @@ img {
 }
 
 .button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -748,13 +749,69 @@ img {
   line-height: 16px;
   text-align: center;
   background-color: #FCFCFC;
-  border: 4px solid rgba(254, 175, 195, 0.7);
+  outline: 4px solid rgba(252, 252, 252, 0.4);
   color: #2D3440;
   border-radius: 26px;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   padding: 14px 32px;
   margin-right: auto;
   margin-left: -4px;
+}
+
+
+.button:hover {
+  background: rgba(252, 252, 252, 0.4);
+  outline: 4px solid #FCFCFC;
+  box-shadow: 0 4px 15px rgba(133, 133, 133, 0.15);
+}
+
+.button:focus-visible {
+  outline: 4px solid transparent;
+  background: rgba(252, 252, 252, 0.5);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+}
+
+.button:focus-visible::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(100%);
+  height: calc(100%);
+  left: -2px;
+  top: -2px;
+  border: 2px solid #2D3440;
+  border-radius: 26px;
+}
+
+.button:active {
+  outline: 4px solid transparent;
+  background: #FCFCFC;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button:active::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(100%);
+  height: calc(100%);
+  left: -2px;
+  top: -2px;
+  border: 2px solid #2D3440;
+  border-radius: 26px;
+}
+
+.button:disabled {
+  background: #E7E7E7;
+  border: 4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: 0 0 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #B9B9B9;
 }
 
 /*-------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ----------- HERO БЛОК ----------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
@@ -824,8 +881,6 @@ img {
   flex-wrap: wrap;
 }
 
-
-
 /*-------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ----------- PROMO -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
 
 
@@ -864,17 +919,13 @@ img {
   width: 270px;
   background-color: #FCFCFC;
   border-radius: 8px;
-  /* padding-top: 90px; */
 }
-
-
 
 .best-mask {
   display: flex;
   border-radius: 50%;
   margin-top: -51px;
   margin-bottom: 16px;
-
 }
 
 .best-title {
@@ -933,10 +984,45 @@ img {
   border-radius: 50%;
   border: 0;
   background-color: #FF2F64;
-  background-image: url("../images/opened-cart.svg");
+  background-image: url('../images/opened-cart.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: 0.2s;
+}
+
+.best-basket:hover {
+  border: 2px solid #FF2F64;
+  background: rgba(252, 252, 252, 0.3);
+  background-image: url("../images/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+.best-basket:focus-visible {
+  border: 2px solid #2D3440;
+  background-color: #FF2F64;
+  background-image: url('../images/opened-cart.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  outline: none;
+}
+
+.best-basket:active {
+  background: #FFCBD8;
+  border: 2px solid #FF2F64;
+  background-image: url("../images/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.best-basket:disabled {
+  border: 0;
+  background: #B9B9B9;
+  background-image: url("../images/disabled-cart.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 
 /*--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ------------- BESTSELLERS -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
 
@@ -1037,7 +1123,6 @@ img {
 .advantages-point {
   margin: 0;
 }
-
 
 
 /*--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -------------- ADVANTAGES -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
@@ -1155,9 +1240,9 @@ img {
 
 
 .submit-button {
+  position: relative;
   display: flex;
-  font-family: 'Inter';
-  font-style: normal;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -1166,8 +1251,76 @@ img {
   padding: 14px 32px;
   border-radius: 26px;
   background-color: #FF2F64;
-  border: 0;
+  border: 4px solid rgba(255, 47, 100, 0.3);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   flex-wrap: wrap;
+  cursor: pointer;
+  background-clip: padding-box;
+  transition: 0.4s;
+}
+
+.submit-button:hover {
+  background: rgba(252, 252, 252, 0.3);
+  border: 4px solid #FF2F64;
+  border-radius: 26px;
+  color: #2D3440;
+  box-shadow: 0 0 0;
+}
+
+.submit-button:focus-visible {
+  clear: both;
+  background: #FF2F64;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  color: #FCFCFC;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+.submit-button:focus-visible::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(100%);
+  height: calc(100%);
+  left: -2px;
+  top: -2px;
+  border: 2px solid #2D3440;
+  border-radius: 26px;
+}
+
+.submit-button:active {
+  background: #FEAFC3;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  color: #FCFCFC;
+  outline: none;
+}
+
+.submit-button:active::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(100%);
+  height: calc(100%);
+  left: -2px;
+  top: -2px;
+  border: 2px solid #2D3440;
+  border-radius: 26px;
+}
+
+.submit-button:disabled {
+  background: #B9B9B9;
+  border: 4px solid rgba(185, 185, 185, 0.3);
+  border-radius: 26px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #565C66;
+  box-shadow: 0 0 0;
 }
 
 
@@ -1315,7 +1468,6 @@ img {
 .address-label {
   display: flex;
   font-family: 'Inter', sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -2068,7 +2220,7 @@ img {
   padding: 0 24px;
 }
 
-.filter-submit {
+.filter-button {
   margin-top: auto;
   background: rgba(252, 252, 252, 0.3);
   border: 2px solid #FCFCFC;
@@ -2080,7 +2232,35 @@ img {
   padding: 8px 52.5px;
   color: #2D3440;
   cursor: pointer;
+  transition: 0.4s;
 }
+
+.filter-button:hover {
+  background: #FCFCFC;
+  border: 2px solid rgba(252, 252, 252, 0.3);
+  background-clip: padding-box;
+}
+
+.filter-button:focus-visible {
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #2D3440;
+  background-clip: padding-box;
+  outline: none;
+}
+
+.filter-button {
+  background: rgba(252, 252, 252, 0.5);
+  border: 2px solid rgba(252, 252, 252, 0);
+}
+
+.filter-button:disabled {
+  background: rgba(252, 252, 252, 0.3);
+  opacity: 0.4;
+  border: 2px solid #FCFCFC;
+}
+
+
+
 
 
 .catalog-wrapper {
