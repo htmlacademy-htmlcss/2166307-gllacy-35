@@ -53,13 +53,13 @@ function checkIndex(n) {
 }
 
 //листаем вправо
-function nextSlide () {
+function nextSlide() {
   updateActiveSlide(slideIndex + 1)
 
 }
 
 //листаем влево
-function prevSlide () {
+function prevSlide() {
   updateActiveSlide(slideIndex - 1)
 
 }
@@ -67,7 +67,7 @@ function prevSlide () {
 //обновляем интервал
 function makeTimer() {
   clearInterval(timer)
-  timer = setInterval(function() { // setInterval позволяет вызывать функцию регулярно, повторяя вызов через определённый интервал времени
+  timer = setInterval(function () { // setInterval позволяет вызывать функцию регулярно, повторяя вызов через определённый интервал времени
     nextSlide() //просто листаем вправо
   }, 650000); //<---- здесь можно задать временной интервал переключения слайдов в милли секундах [ 1000мс = 1с]
 }
@@ -75,7 +75,7 @@ function makeTimer() {
 //вешаем обработчики событий
 
 //обработчики кликов по радиокнопкам
-Array.from(slides).forEach((current, index)=>{
+Array.from(slides).forEach((current, index) => {
   current.onclick = () => {
     updateActiveSlide(index)
   }

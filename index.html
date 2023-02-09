@@ -28,7 +28,7 @@
             <!------------  Выпадающее меню Каталог------------>
             <div class="catalog-menu">
               <span class="catalog-novelties">Новинки</span>
-              <ul class="catalog-list">
+              <ul class="menu-list">
                 <li class="catalog-item"><a class="catalog-item-link" href="catalog.html">Сливочное</a></li>
                 <li class="catalog-item"><a class="catalog-item-link" href="index.html">Щербеты</a></li>
                 <li class="catalog-item"><a class="catalog-item-link" href="">Фруктовый лед</a></li>
@@ -61,7 +61,7 @@
             <span class="login-title">Личный кабинет</span>
             <label class="for-login" for="login-target"><span class="visually-hidden">Логин для входа в личный кабинет
                 на сайте.</span></label>
-            <input class="login-line" placeholder="Введите логин" type="email" name="login-input" id="login-target"
+            <input class="login-line" placeholder="email@example.com" type="email" name="login-input" id="login-target"
               autocomplete="off" required>
 
             <label class="for-password" for="password-target"><span class="visually-hidden">Пароль для входа в личный
@@ -69,11 +69,15 @@
             <input class="password-line" placeholder="Введите пароль" type="password" name="password-input"
               id="password-target" autocomplete="off" required>
 
-            <button type="submit">
-              Войти
-            </button>
-            <a class="login-link">Забыли пароль?</a>
-            <a class="login-link">Регистрация</a>
+            <div class="submit-part">
+              <button class="submit-button login-submit" type="submit">
+                Войти
+              </button>
+              <div class="recovery-registration">
+                <a class="text-link re-link" href="">Забыли пароль?</a>
+                <a class="text-link re-link" href="">Регистрация</a>
+              </div>
+            </div>
           </form>
           <!------------  Форма авторизации ------------>
 
@@ -85,39 +89,56 @@
           <!------------  Корзина ------------>
           <div class="basket-form" role="dialog" id="prebasket">
             <span class="basket-title">Корзина</span>
+
             <ul class="basket-list">
+
               <li class="basket-item">
                 <a class="basket-item-link" href="">
                   <img class="basket-pic" src="images/malinka-basket.png" width="46" height="46"
                     alt="Мороженое со вкусом Малины">
-                  <div>
-                    <span class="basket-description">Малинка</span>
-                    <span class="basket-qty">1 кг х 310 ₽</span>
+                  <div class="line-description">
+                    <span class="line-product">Малинка</span>
+                    <span class="line-qty">1 кг х 310 ₽</span>
+                  </div>
+                  <div class="line-amont">
+                    310 ₽
                   </div>
                 </a>
                 <button class="delete-btn"><span class=visually-hidden>Удалить позицию из
                     корзины.</span></button>
               </li>
+
               <li class="basket-item">
                 <a class="basket-item-link" href="">
                   <img class="basket-pic" src="images/bublegum-basket.png" width="46" height="46"
                     alt="Мороженое со вкусом Малины">
-                  <div>
-                    <span class="basket-description">Бабл-гам</span>
-                    <span class="basket-qty">1,5 кг х 320 ₽</span>
+                    <div class="line-description">
+                    <span class="line-product">Бабл-гам</span>
+                    <span class="line-qty">1,5 кг х 320 ₽</span>
+                  </div>
+                  <div class="line-amont">
+                    480 ₽
                   </div>
                 </a>
                 <button class="delete-btn"><span class=visually-hidden>Удалить позицию из
                     корзины.</span></button>
               </li>
+
             </ul>
-            <div>
-              <button class="open-basket-btn">Оформить заказ</button>
-              <span>Итого: 790 ₽</span>
+            <div class="basket-bottom">
+              <button class="submit-button basket-submit">Оформить заказ</button>
+              <span class="basket-total">Итого: 790 ₽</span>
             </div>
           </div>
           <!------------  Корзина ------------>
 
+          <!------------  Пустая Корзина ------------>
+
+          <div class="empty-basket">
+            <span class="empty-message">Ваша корзина пока пуста</span>
+          </div>
+
+          <!------------  Пустая Корзина ------------>
         </div>
 
       </div>
@@ -428,7 +449,7 @@
                   Отправить
                 </button>
               </form>
-              </div>
+            </div>
           </li>
 
         </ul>
@@ -458,12 +479,14 @@
           <div class="date-phone">
             <div class="order-date">
               <label class="date-label" for="delivery-date"> Дата </label>
-              <input class="date-input" type="date" value="2020-04-01" name="date-of-delivery" id="delivery-date" required>
+              <input class="date-input" type="date" value="2020-04-01" name="date-of-delivery" id="delivery-date"
+                required>
             </div>
 
             <div class="order-phone">
               <label class="phone-label" for="customer-phone">Телефон</label>
-              <input class="phone-input" type="tel" size="20" placeholder="+7 800 999-00-00" name="phone-of-customer" id="customer-phone" required>
+              <input class="phone-input" type="tel" size="20" placeholder="+7 800 999-00-00" name="phone-of-customer"
+                id="customer-phone" required>
             </div>
           </div>
 
@@ -600,8 +623,8 @@
 
         <label class="message-label" for="customer-message"><span class="visually-hidden"> Текст сообщения.</span>
         </label>
-        <textarea class="message-input" maxlength="200" placeholder="В свободной форме"
-          name="message-of-customer" id="customer-message" required></textarea>
+        <textarea class="message-input" maxlength="200" placeholder="В свободной форме" name="message-of-customer"
+          id="customer-message" required></textarea>
 
         <button class="submit-button feedback-submit" type="submit">Отправить</button>
 

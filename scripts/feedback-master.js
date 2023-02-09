@@ -31,13 +31,13 @@ closeWinEvent.addEventListener('click', function () {  // обработчик �
 });
 
 // закрытие меню по нажатию клавиши ESC
-document.addEventListener('keydown', function(e) {
-	if( e.keyCode == 27 ){ // код клавиши Escape, но можно использовать e.key
+document.addEventListener('keydown', function (e) {
+  if (e.keyCode == 27) { // код клавиши Escape, но можно использовать e.key
     var modalWin = document.getElementById('popupWin'); // находим наше окошко
     document.querySelectorAll('.shadow')[0].style.setProperty('--display', 'none'); // убираем полупрозрачный фон
     document.getElementById('feedback-window').reset() // делаем сброс формы перед выключением модального окна
     modalWin.style.display = 'none'; // выключаем модальное окно
-	}
+  }
 });
 
 //----------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------- ОТКРЫТИЕ-ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА -----------------------------------------------
