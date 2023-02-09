@@ -11,24 +11,19 @@ bord = document.querySelector('.button');
 
 //общая функция обновления активного слайда
 function updateActiveSlide(n) {
-
   // в зависимости от слайда (n), ставим на body соответсвующий background
   switch (n) {
     case -1:
       document.body.style.setProperty("--background", "#FCC850");
-
       break;
     case 0:
       document.body.style.setProperty("--background", "#FEAFC3");
-
       break;
     case 1:
       document.body.style.setProperty("--background", "#69A9FF");
-
       break;
     case 2:
       document.body.style.setProperty("--background", "#FCC850");
-
       break;
     case 3:
       document.body.style.setProperty("--background", "#FEAFC3");

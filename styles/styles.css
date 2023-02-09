@@ -207,6 +207,7 @@ img {
 }
 
 .catalog-novelties {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 103px;
@@ -217,6 +218,17 @@ img {
   line-height: 20px;
   color: #2D3440;
   margin-bottom: 8px;
+}
+
+.catalog-novelties::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 103px;
+  height: 1px;
+  bottom: -4px;
+  left: 16px;
+  background-color: #B9B9B9;
 }
 
 .menu-list {
@@ -662,6 +674,7 @@ img {
   border-radius: 4px;
   background-color: #FCFCFC;
   animation: fadeInFromNone 0.6s ease-in-out;
+  z-index: 10;
 }
 
 .basket-title {
@@ -902,7 +915,7 @@ img {
   display: none;
   grid-template-columns: 540px 580px;
   width: 1160px;
-  gap: 17px;
+  gap: 16px;
   line-height: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -913,7 +926,7 @@ img {
 .hero-info {
   position: relative;
   display: flex;
-  padding: 137px 0 134px 65px;
+  padding: 136.5px 0 134px 65px;
   flex-direction: column;
 }
 
@@ -942,6 +955,60 @@ img {
   margin-bottom: 44px;
   flex-wrap: wrap;
 }
+
+.hero-images {
+  display: flex;
+  width: 470px;
+  padding-top: 21px;
+}
+
+.strawberry-image,
+.banana-image,
+.karamel-image {
+  position: relative;
+  display: flex;
+  width: 312px;
+  height: 507px;
+  z-index: -2;
+}
+
+.strawberry-image::before {
+  display: block;
+  content: '';
+  width: 312px;
+  height: 312px;
+  border-radius: 50%;
+  position: absolute;
+  top: 99.5px;
+  background: #FFCBD8;
+  z-index: -1;
+}
+
+.banana-image::before {
+  display: block;
+  content: '';
+  width: 312px;
+  height: 312px;
+  border-radius: 50%;
+  position: absolute;
+  top: 99.5px;
+  background: #9FC8FF;
+  z-index: -1;
+}
+
+.karamel-image::before {
+  display: block;
+  content: '';
+  width: 312px;
+  height: 312px;
+  border-radius: 50%;
+  position: absolute;
+  top: 99.5px;
+  background: #FCDC92;
+  z-index: -1;
+}
+
+
 
 .slider-check + .slider-label {
   position: absolute;
