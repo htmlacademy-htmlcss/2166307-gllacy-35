@@ -331,8 +331,7 @@
             <div class="promo-description">
               <h3 class="promo-name">Маршмеллоу даром!</h3>
               <p class="promo-details">При покупке 2 кг пломбира добавим<br> в ваш заказ упаковку нежных<br> зефирок
-                совершенно
-                бесплатно.
+                совершенно бесплатно.
               </p>
               <a href="#" class="button">Хочу подарок</a>
             </div>
@@ -375,13 +374,13 @@
                 alt="Фисташковое мороженое.">
             </div>
             <div class="best-details">
-            <span class="best-title">Фисташка</span>
-            <p class="best-description">Фисташковый пломбир с кусочками шоколада</p>
-            <div class="price-basket">
-              <span class="best-price">340 ₽/кг</span>
-              <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+              <span class="best-title">Фисташка</span>
+              <p class="best-description">Фисташковый пломбир с кусочками шоколада</p>
+              <div class="price-basket">
+                <span class="best-price">340 ₽/кг</span>
+                <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+              </div>
             </div>
-          </div>
           </li>
 
           <li class="best-item">
@@ -390,13 +389,13 @@
                 alt="Черничное мороженое.">
             </div>
             <div class="best-details">
-            <span class="best-title">Черника</span>
-            <p class="best-description">Крем-брюле<br> с черничным джемом</p>
-            <div class="price-basket">
-              <span class="best-price">330 ₽/кг</span>
-              <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+              <span class="best-title">Черника</span>
+              <p class="best-description">Крем-брюле<br> с черничным джемом</p>
+              <div class="price-basket">
+                <span class="best-price">330 ₽/кг</span>
+                <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+              </div>
             </div>
-          </div>
           </li>
 
           <li class="best-item">
@@ -405,13 +404,13 @@
                 alt="Мороженое с подсыпкой Бабл-гам.">
             </div>
             <div class="best-details">
-            <span class="best-title">Бабл-гам</span>
-            <p class="best-description">Ванильный пломбир<br> со сладкой посыпкой</p>
-            <div class="price-basket">
-              <span class="best-price">320 ₽/кг</span>
-              <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+              <span class="best-title">Бабл-гам</span>
+              <p class="best-description">Ванильный пломбир<br> со сладкой посыпкой</p>
+              <div class="price-basket">
+                <span class="best-price">320 ₽/кг</span>
+                <button class="best-basket"><span class="visually-hidden">Положить в корзину</span></button>
+              </div>
             </div>
-          </div>
           </li>
 
         </ul>
@@ -523,7 +522,14 @@
 
           <div class="date-phone">
             <div class="order-date">
-              <label class="date-label" for="delivery-date"> Дата </label>
+              <div class="delivery-info">
+                <label class="date-label" for="delivery-date"> Дата </label>
+                <button class="date-info-button" type="button" aria-labelledby="tooltip-date"><span
+                    class="visually-hidden">Дополнительная информация</span></button>
+                <span class="date-info-tooltip" role="tooltip" id="tooltip-date">
+                  Введите дату доставки
+                </span>
+              </div>
               <input class="date-input" type="date" value="2020-04-01" name="date-of-delivery" id="delivery-date"
                 required>
             </div>
@@ -536,7 +542,15 @@
           </div>
 
           <div class="order-address">
-            <label class="address-label" for="customer-address"> Адрес </label>
+            <div class="delivery-info">
+              <label class="address-label" for="customer-address"> Адрес </label>
+            <button class="address-info-button" type="button" aria-labelledby="tooltip-address"><span
+              class="visually-hidden">Дополнительная информация</span></button>
+          <span class="address-info-tooltip" role="tooltip" id="tooltip-address">
+            Введите название<br> улицы, дома и квартиры
+          </span>
+        </div>
+
             <input class="address-input" type="text" size="50" placeholder="ул. Большая Конюшенная, 19/8"
               name="address-of-customer" id="customer-address" required>
           </div>
