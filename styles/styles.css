@@ -958,7 +958,7 @@ img {
 
 .hero-images {
   display: flex;
-  align-items: center ;
+  align-items: center;
   width: 606px;
   /* background-color: aquamarine; */
   /* padding-top: 4px; */
@@ -2031,12 +2031,10 @@ img {
   line-height: 16px;
   color: #565C66;
   padding: 10px 8px;
-  /* background: #FFFFFF; */
   background: #FFFFFF;
   border: 1px solid #B9B9B9;
   border-radius: 1px;
   box-shadow: 0 4px 8px rgba(194, 194, 194, 0.2);
-  /* z-index: 20; */
   flex-wrap: wrap;
   animation: fadeInFromNone 0.5s ease-in-out;
 }
@@ -2049,7 +2047,7 @@ img {
   height: 14px;
   top: 11.5px;
   left: -7px;
-  background-image: url("../images/tooltip-triangle888.svg");
+  background-image: url("../images/tooltip-triangle.svg");
   background-repeat: no-repeat;
   background-position: center center;
   animation: fadeInFromNone 0.3s ease-in-out;
@@ -2104,7 +2102,6 @@ img {
   border: 1px solid #B9B9B9;
   border-radius: 1px;
   box-shadow: 0 4px 8px rgba(194, 194, 194, 0.2);
-  /* z-index: 20; */
   flex-wrap: wrap;
   animation: fadeInFromNone 0.5s ease-in-out;
 }
@@ -2117,7 +2114,7 @@ img {
   height: 14px;
   top: 11.5px;
   left: -7px;
-  background-image: url("../images/tooltip-triangle888.svg");
+  background-image: url("../images/tooltip-triangle.svg");
   background-repeat: no-repeat;
   background-position: center center;
   animation: fadeInFromNone 0.3s ease-in-out;
