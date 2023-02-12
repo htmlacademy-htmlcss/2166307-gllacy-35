@@ -98,7 +98,7 @@
       }
 
       // Get select options
-      var options = '<div data-cuteselect-title>' + caption + '</div><div data-cuteselect-options><div data-cuteselect-options-container>';
+      var options = '<div class="initial-select" data-cuteselect-title>' + caption + '</div><div data-cuteselect-options><div data-cuteselect-options-container>';
       var cells = item.getElementsByTagName('option');
       for (var i = 0; i < cells.length; i++) {
         if (cells[i].hasAttribute('disabled')) { continue; }
@@ -136,7 +136,8 @@
           cells[i].style.position = 'absolute';
           //cells[i].style.left = item.offsetLeft + 'px';
           //cells[i].style.top = (item.offsetTop + item.offsetHeight) + 'px';
-          cells[i].style.top = '30px';
+          cells[i].style.top = '15px';
+          cells[i].style.left = '-16px';
         }
       }
 

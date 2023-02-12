@@ -3,7 +3,7 @@
 const rangeInput = document.querySelectorAll(".range-input input"),
   priceInput = document.querySelectorAll(".price-input input"),
   range = document.querySelector(".double-slider .progress");
-let priceGap = 1000;
+let priceGap = 99;  // задает ценовой диапазон поделеный на  10
 priceInput.forEach(input => {
   input.addEventListener("input", e => {
     let minPrice = parseInt(priceInput[0].value),
