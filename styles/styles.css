@@ -2880,17 +2880,17 @@ img {
   margin-bottom: 44px;
 }
 
-.line1 {
+.radio-line {
   display: flex;
   width: 1170px;
   gap: 24px;
   flex-wrap: wrap;
 }
 
-.line2 {
+.checkbox-line {
   display: flex;
   width: 1170px;
-  gap: 24px;
+  gap: 17px;
   flex-wrap: wrap;
 }
 
@@ -2927,7 +2927,7 @@ img {
   display: flex;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 18px;
-  padding: 0 24px;
+  padding: 0 13px 0 21.5px;
 }
 
 .button-filter {
@@ -2987,13 +2987,13 @@ img {
 .filter-additives {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8.6px;
 }
 
 .filter-fatness {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 2px;
 }
 
 
@@ -3009,7 +3009,7 @@ img {
   font-size: 14px;
   line-height: 20px;
   color: #2D3440;
-  padding: 10px 0;
+  padding: 10px 7.5px 10px 0;
   cursor: pointer;
   outline: none;
   transition: 0.4s;
@@ -3017,22 +3017,25 @@ img {
 }
 
 .fatness-radio {
-  padding: 8px 0;
+  padding: 8px 12.6px 8px 8px;
 }
 
 .additive-input,
 .fatness-input {
+  position: relative;
   display: block;
-  width: 14.66px;
-  height: 14.66px;
-  opacity: 0;
+  margin: 0;
+  width: 16px;
+  height: 0.01px;
+  opacity: 1;
+  outline: none;
 }
 
 .additive-checkbox::before {
   position: absolute;
   content: '';
-  top: 11.5px;
-  left: -26px;
+  top: 11.4px;
+  left: -15px;
   display: block;
   height: 14.66px;
   width: 14.66px;
@@ -3040,19 +3043,52 @@ img {
   border: 1.33333px solid #2D3440;
   z-index: 2;
   cursor: pointer;
+  transition: 0.4s;
+}
+
+.additive-checkbox::after {
+  position: absolute;
+  content: '';
+  top: 11.4px;
+  left: -15px;
+  display: block;
+  height: 14.66px;
+  width: 14.66px;
+  border-radius: 3px;
+  border: 1.33333px solid #FCFCFC;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.4s;
 }
 
 .fatness-radio::before {
   position: absolute;
   content: '';
-  top: 10px;
-  left: -36px;
+  top: 9.5px;
+  left: -15px;
   display: block;
   height: 14.66px;
   width: 14.66px;
   border-radius: 50%;
   border: 1.33333px solid #2D3440;
   cursor: pointer;
+  transition: 0.4s;
+}
+
+.fatness-radio::after {
+  position: absolute;
+  content: '';
+  top: 9.5px;
+  left: -15px;
+  display: block;
+  height: 14.66px;
+  width: 14.66px;
+  border-radius: 50%;
+  border: 1.33333px solid #FCFCFC;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.4s;
 }
 
 .additive-input.chocolate-box:checked ~ .additive-checkbox.chocolate-box::before,
@@ -3063,13 +3099,13 @@ img {
   position: absolute;
   content: '';
   top: 11.5px;
-  left: -26px;
+  left: -15px;
   display: block;
   background-image: url("../images/checked-true.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  height: 14.66px;
-  width: 14.66px;
+  height: 16px;
+  width: 16px;
   border-radius: 3px;
   border: 1.33333px solid #2D3440;
 }
@@ -3090,8 +3126,8 @@ img {
   position: absolute;
   content: '';
   display: block;
-  top: 10px;
-  left: -39px;
+  top: 9.5px;
+  left: -15px;
   height: 22px;
   width: 22px;
   border: 2px solid #AF4FFF;
@@ -3102,7 +3138,7 @@ img {
 .additive-input.fruits-box:active ~ .additive-checkbox.fruits-box,
 .additive-input.syrups-box:active ~ .additive-checkbox.syrups-box,
 .additive-input.jams-box:active ~ .additive-checkbox.jams-box {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .additive-input.chocolate-box:disabled ~ .additive-checkbox.chocolate-box,
@@ -3120,8 +3156,8 @@ img {
 .fatness-input.over-radio:checked ~ .fatness-radio.over-radio::before {
   position: absolute;
   content: '';
-  top: 10px;
-  left: -36px;
+  top: 9.5px;
+  left: -15px;
   display: block;
   background-image: url("../images/radio-checked.svg");
   background-repeat: no-repeat;
@@ -3132,33 +3168,67 @@ img {
   border: 1.33333px solid #2D3440;
 }
 
-.fatness-input.zero-radio:hover ~ .fatness-radio.zero-radio,
-.fatness-input.ten-radio:hover ~ .fatness-radio.ten-radio,
-.fatness-input.thirty-radio:hover ~ .fatness-radio.thirty-radio,
-.fatness-input.over-radio:hover ~ .fatness-radio.over-radio {
-  opacity: 0.6;
-}
-
-.fatness-input.zero-radio:focus-visible ~ .fatness-radio.zero-radio::after,
-.fatness-input.ten-radio:focus-visible ~ .fatness-radio.ten-radio::after,
-.fatness-input.thirty-radio:focus-visible ~ .fatness-radio.thirty-radio::after,
-.fatness-input.over-radio:focus-visible ~ .fatness-radio.over-radio::after {
+.fatness-input.zero-radio:checked ~ .fatness-radio.zero-radio::after,
+.fatness-input.ten-radio:checked ~ .fatness-radio.ten-radio::after,
+.fatness-input.thirty-radio:checked ~ .fatness-radio.thirty-radio::after,
+.fatness-input.over-radio:checked ~ .fatness-radio.over-radio::after {
   position: absolute;
   content: '';
-  top: 10px;
-  left: -39px;
+  top: 9.5px;
+  left: -15px;
+  display: block;
+  background-image: url("../images/radio-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 14.66px;
+  width: 14.66px;
+  border-radius: 50%;
+  border: 1.33333px solid #2D3440;
+  filter: invert(100%) sepia(93%) saturate(2%) hue-rotate(328deg) brightness(106%) contrast(98%);
+}
+
+.fatness-input.zero-radio:hover ~ .fatness-radio.zero-radio::after,
+.fatness-input.ten-radio:hover ~ .fatness-radio.ten-radio:after,
+.fatness-input.thirty-radio:hover ~ .fatness-radio.thirty-radio:after,
+.fatness-input.over-radio:hover ~ .fatness-radio.over-radio:after {
+  opacity: 1;
+}
+
+.fatness-input.zero-radio:hover ~ .fatness-radio.zero-radio::before,
+.fatness-input.ten-radio:hover ~ .fatness-radio.ten-radio:before,
+.fatness-input.thirty-radio:hover ~ .fatness-radio.thirty-radio:before,
+.fatness-input.over-radio:hover ~ .fatness-radio.over-radio:before {
+  opacity: 0;
+}
+
+.fatness-input.zero-radio:focus-visible::before,
+.fatness-input.ten-radio:focus-visible::before,
+.fatness-input.thirty-radio:focus-visible::before,
+.fatness-input.over-radio:focus-visible::before {
+  position: absolute;
+  content: '';
+  top: -13px;
+  left: -1.5px;
   display: block;
   height: 22px;
   width: 22px;
   border-radius: 50%;
-  border: 2px solid #AF4FFF;
+  border: 2px solid #FCFCFC;
+  outline: none;
 }
 
-.fatness-input.zero-radio:active ~ .fatness-radio.zero-radio,
-.fatness-input.ten-radio:active ~ .fatness-radio.ten-radio,
-.fatness-input.thirty-radio:active ~ .fatness-radio.thirty-radio,
-.fatness-input.over-radio:active ~ .fatness-radio.over-radio {
-  opacity: 0.3;
+.fatness-input.zero-radio:active ~ .fatness-radio.zero-radio:before,
+.fatness-input.ten-radio:active ~ .fatness-radio.ten-radio:before,
+.fatness-input.thirty-radio:active ~ .fatness-radio.thirty-radio:before,
+.fatness-input.over-radio:active ~ .fatness-radio.over-radio:before {
+  opacity: 0.5;
+}
+
+.fatness-input.zero-radio:active ~ .fatness-radio.zero-radio:after,
+.fatness-input.ten-radio:active ~ .fatness-radio.ten-radio:after,
+.fatness-input.thirty-radio:active ~ .fatness-radio.thirty-radio:after,
+.fatness-input.over-radio:active ~ .fatness-radio.over-radio:after {
+  opacity: 0;
 }
 
 .fatness-input.zero-radio:disabled ~ .fatness-radio.zero-radio,
@@ -3402,17 +3472,17 @@ img {
 
 .range-min::-moz-range-thumb,
 .range-max::-moz-range-thumb {
-   /* стилизация плашки */
-   position: relative;
-   height: 16px;
-   width: 16px;
-   border-radius: 50%;
-   background: #FCFCFC;
-   border: 6px solid #2D3440;
-   pointer-events: auto;
-   -moz-appearance: none;
-   cursor: pointer;
-   transition: 0.3s;
+  /* стилизация плашки */
+  position: relative;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #FCFCFC;
+  border: 6px solid #2D3440;
+  pointer-events: auto;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .range-min::-moz-range-thumb:hover,
@@ -3440,7 +3510,6 @@ img {
 
 .goods-options > select {
   position: relative;
-  /* background-color: transparent;*/
   display: flex;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 20px;

@@ -190,7 +190,7 @@
 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
 
-          <div class="line1">
+          <div class="radio-line">
 
             <div class="area-container">
               <h3 class="area-title">Сортировка:</h3>
@@ -228,7 +228,7 @@
                       <label class="visually-hidden" for="min-value">Минимальное значение цены.</label>
                     </div>
                     <div class="field field-max">
-                      <span class="range-center">₽ &#0150</span>
+                      <span class="range-center">₽ &#8211;</span>
                       <input class="input-max" type="number" min="0" max="990" value="500" id="max-value">
                       <label class="visually-hidden" for="max-value">Максимальное значение цены.</label>
                       <span class="range-end">₽</span>
@@ -245,13 +245,14 @@
 
                 <input class="fatness-input zero-radio" type="radio" name="fatness" value="0%" id="fatness-zero"
                   checked>
-                <label class="fatness-radio zero-radio" for="fatness-zero">0 %</label>
+                <label class="fatness-radio zero-radio" for="fatness-zero">0%</label>
 
-                <input class="fatness-input ten-radio" type="radio" name="fatness" value="upto-10%" id="fatness-ten">
+                <input class="fatness-input ten-radio" type="radio" name="fatness" value="upto-10%" id="fatness-ten"
+                  checked>
                 <label class="fatness-radio ten-radio" for="fatness-ten">до 10%</label>
 
                 <input class="fatness-input thirty-radio" type="radio" name="fatness" value="upto-30%"
-                  id="fatness-thirty" checked>
+                  id="fatness-thirty">
                 <label class="fatness-radio thirty-radio" for="fatness-thirty">до 30%</label>
 
                 <input class="fatness-input over-radio" type="radio" name="fatness" value="over-30%" id="fatness-over">
@@ -262,7 +263,7 @@
 
           </div>
 
-          <div class="line2">
+          <div class="checkbox-line">
 
             <div class="area-container">
               <h3 class="area-title">Наполнители:</h3>
