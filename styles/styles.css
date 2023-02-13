@@ -2930,6 +2930,10 @@ img {
   padding: 0 13px 0 21.5px;
 }
 
+.filter-additives {
+  padding: 0 10px 0 21.5px;
+}
+
 .button-filter {
   margin-top: auto;
   background: rgba(252, 252, 252, 0.3);
@@ -2987,7 +2991,6 @@ img {
 .filter-additives {
   display: flex;
   align-items: center;
-  gap: 8.6px;
 }
 
 .filter-fatness {
@@ -3009,7 +3012,7 @@ img {
   font-size: 14px;
   line-height: 20px;
   color: #2D3440;
-  padding: 10px 7.5px 10px 0;
+  padding: 10px 15px 10px 10px;
   cursor: pointer;
   outline: none;
   transition: 0.4s;
@@ -3034,32 +3037,34 @@ img {
 .additive-checkbox::before {
   position: absolute;
   content: '';
-  top: 11.4px;
-  left: -15px;
+  top: 11.6px;
+  left: -13.6px;
   display: block;
-  height: 14.66px;
-  width: 14.66px;
+  height: 16px;
+  width: 16px;
   border-radius: 3px;
   border: 1.33333px solid #2D3440;
   z-index: 2;
   cursor: pointer;
   transition: 0.4s;
+  box-sizing: border-box;
 }
 
 .additive-checkbox::after {
   position: absolute;
   content: '';
-  top: 11.4px;
-  left: -15px;
+  top: 11.6px;
+  left: -13.6px;
   display: block;
-  height: 14.66px;
-  width: 14.66px;
+  height: 16px;
+  width: 16px;
   border-radius: 3px;
   border: 1.33333px solid #FCFCFC;
   z-index: 2;
   cursor: pointer;
   opacity: 0;
   transition: 0.4s;
+  box-sizing: border-box;
 }
 
 .fatness-radio::before {
@@ -3098,8 +3103,8 @@ img {
 .additive-input.jams-box:checked ~ .additive-checkbox.jams-box::before {
   position: absolute;
   content: '';
-  top: 11.5px;
-  left: -15px;
+  top: 11.6px;
+  left: -13.6px;
   display: block;
   background-image: url("../images/checked-true.svg");
   background-repeat: no-repeat;
@@ -3107,38 +3112,75 @@ img {
   height: 16px;
   width: 16px;
   border-radius: 3px;
-  border: 1.33333px solid #2D3440;
+  border: 0;
 }
 
-.additive-input.chocolate-box:hover ~ .additive-checkbox.chocolate-box,
-.additive-input.sugar-box:hover ~ .additive-checkbox.sugar-box,
-.additive-input.fruits-box:hover ~ .additive-checkbox.fruits-box,
-.additive-input.syrups-box:hover ~ .additive-checkbox.syrups-box,
-.additive-input.jams-box:hover ~ .additive-checkbox.jams-box {
-  opacity: 0.6;
-}
-
-.additive-input.chocolate-box:focus-visible ~ .additive-checkbox.chocolate-box::after,
-.additive-input.sugar-box:focus-visible ~ .additive-checkbox.sugar-box::after,
-.additive-input.fruits-box:focus-visible ~ .additive-checkbox.fruits-box::after,
-.additive-input.syrups-box:focus-visible ~ .additive-checkbox.syrups-box::after,
-.additive-input.jams-box:focus-visible ~ .additive-checkbox.jams-box::after {
+.additive-input.chocolate-box:checked ~ .additive-checkbox.chocolate-box::after,
+.additive-input.sugar-box:checked ~ .additive-checkbox.sugar-box::after,
+.additive-input.fruits-box:checked ~ .additive-checkbox.fruits-box::after,
+.additive-input.syrups-box:checked ~ .additive-checkbox.syrups-box::after,
+.additive-input.jams-box:checked ~ .additive-checkbox.jams-box::after {
   position: absolute;
   content: '';
+  top: 11.6px;
+  left: -13.6px;
   display: block;
-  top: 9.5px;
-  left: -15px;
-  height: 22px;
-  width: 22px;
-  border: 2px solid #AF4FFF;
+  background-image: url("../images/checked-true.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  border: 0;
+  filter: invert(100%) sepia(93%) saturate(2%) hue-rotate(328deg) brightness(106%) contrast(98%);
 }
 
-.additive-input.chocolate-box:active ~ .additive-checkbox.chocolate-box,
-.additive-input.sugar-box:active ~ .additive-checkbox.sugar-box,
-.additive-input.fruits-box:active ~ .additive-checkbox.fruits-box,
-.additive-input.syrups-box:active ~ .additive-checkbox.syrups-box,
-.additive-input.jams-box:active ~ .additive-checkbox.jams-box {
+.additive-input.chocolate-box:hover ~ .additive-checkbox.chocolate-box::after,
+.additive-input.sugar-box:hover ~ .additive-checkbox.sugar-box::after,
+.additive-input.fruits-box:hover ~ .additive-checkbox.fruits-box::after,
+.additive-input.syrups-box:hover ~ .additive-checkbox.syrups-box::after,
+.additive-input.jams-box:hover ~ .additive-checkbox.jams-box::after {
+  opacity: 1;
+}
+
+.additive-input.chocolate-box:hover ~ .additive-checkbox.chocolate-box::before,
+.additive-input.sugar-box:hover ~ .additive-checkbox.sugar-box::before,
+.additive-input.fruits-box:hover ~ .additive-checkbox.fruits-box::before,
+.additive-input.syrups-box:hover ~ .additive-checkbox.syrups-box::before,
+.additive-input.jams-box:hover ~ .additive-checkbox.jams-box::before {
+  opacity: 0;
+}
+
+.additive-input.chocolate-box:focus-visible::before,
+.additive-input.sugar-box:focus-visible::before,
+.additive-input.fruits-box:focus-visible::before,
+.additive-input.syrups-box:focus-visible::before,
+.additive-input.jams-box:focus-visible::before {
+  position: absolute;
+  content: '';
+  top: -13px;
+  left: -2.6px;
+  display: block;
+  height: 22px;
+  width: 22px;
+  border: 2px solid #FCFCFC;
+  outline: none;
+}
+
+.additive-input.chocolate-box:active ~ .additive-checkbox.chocolate-box::before,
+.additive-input.sugar-box:active ~ .additive-checkbox.sugar-box::before,
+.additive-input.fruits-box:active ~ .additive-checkbox.fruits-box::before,
+.additive-input.syrups-box:active ~ .additive-checkbox.syrups-box::before,
+.additive-input.jams-box:active ~ .additive-checkbox.jams-box::before {
   opacity: 0.5;
+}
+
+.additive-input.chocolate-box:active ~ .additive-checkbox.chocolate-box::after,
+.additive-input.sugar-box:active ~ .additive-checkbox.sugar-box::after,
+.additive-input.fruits-box:active ~ .additive-checkbox.fruits-box::after,
+.additive-input.syrups-box:active ~ .additive-checkbox.syrups-box::after,
+.additive-input.jams-box:active ~ .additive-checkbox.jams-box::after {
+  opacity: 0;
 }
 
 .additive-input.chocolate-box:disabled ~ .additive-checkbox.chocolate-box,
