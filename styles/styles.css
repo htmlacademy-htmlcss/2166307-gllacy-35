@@ -1671,7 +1671,6 @@ img {
   margin: 0 auto;
   gap: 40px 30px;
   padding: 0;
-  margin: 0;
   flex-wrap: wrap;
 }
 
@@ -2687,7 +2686,6 @@ img {
   top: -4px;
   left: -4px;
   border: 2px solid #2D3440;
-  ;
 }
 
 .breadcrumbs-link:active {
@@ -3283,25 +3281,6 @@ img {
 
 /* -----↑ ↑ ↑-------кастомизация чекбоксов и радио в Фильтре каталога ------↑ ↑ ↑-----*/
 
-.filter-area-title {
-  display: flex;
-  font-family: "Rubik", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-  margin: 0;
-  padding: 12px 0 16.5px 0;
-  flex-wrap: wrap;
-}
-
-.catalog-filter-area {
-  display: flex;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
-
 
 /*--↓ ↓ ↓----double range slider ----------↓ ↓ ↓----------*/
 
@@ -3672,7 +3651,7 @@ select option:hover {
 }
 
 .product-options:hover {
-  color: rgb(0, 0, 0, 0.6)
+  color: rgb(0, 0, 0, 0.6);
 }
 
 .product-options:focus-visible {
