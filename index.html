@@ -539,8 +539,8 @@
                   Введите дату доставки
                 </span>
               </div>
-              <input class="date-input" type="date" value="2020-04-01" min="2020-04-01" max="2023-04-01"
-                name="date-of-delivery" id="delivery-date" required>
+              <input class="date-input" type="text" placeholder="01.04.2020" name="date-of-delivery" id="delivery-date"
+                required>
             </div>
 
             <div class="order-phone">
@@ -565,13 +565,9 @@
           </div>
 
           <div class="button-container"><button class="submit-button" type="submit">Отправить</button></div>
-
         </form>
 
       </section>
-
-
-
       <!--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ --------------- DELIVERY -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------->
 
 
@@ -711,7 +707,18 @@
     <script src="scripts/subscr-master.js"></script>
     <script src="scripts/feedback-master.js"></script>
     <script src="scripts/nav-master.js"></script>
+    <script src="scripts/date-picker.js"></script>
+
+    <script>
+      const input = document.getElementById('delivery-date');
+      const datepicker = new TheDatepicker.Datepicker(input);
+      datepicker.render();
+    </script>
 
   </body>
+
+
+
+
 
 </html>
