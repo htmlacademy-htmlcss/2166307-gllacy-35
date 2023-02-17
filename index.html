@@ -39,7 +39,6 @@
             <a class="navigation-item" href="">Доставка и оплата</a>
             <a class="navigation-item" href="">О компании</a>
           </nav>
-
         </div>
 
         <div class="user-menu">
@@ -53,8 +52,6 @@
               autocomplete="off" required>
           </form>
           <!------------  Поиск по сайту------------>
-
-
           <button class="login-button" id="login-btn" type="button" value="off">Вход</button>
           <!------------  Форма авторизации ------------>
           <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -81,11 +78,10 @@
           </form>
           <!------------  Форма авторизации ------------>
 
-
-
           <button class="basket-button" id="basket-btn" type="button" value="off"><span
               class="visually-hidden">Открывает корзину.</span>2
             товара</button>
+
           <!------------  Корзина ------------>
           <div class="basket-form" role="dialog" id="prebasket">
             <span class="basket-title">Корзина</span>
@@ -172,21 +168,20 @@
 
               <p class="hero-description">Натуральное мороженое из свежих сливок<br>
                 и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-
               <a href="#" class="button">Заказать</a>
 
             </div>
             <div class="hero-images">
               <div class="strawberry-image">
-                <img class="icecream-illustration" src="images/strawberry-hero.png" width="306" height="507"
+                <img class="strawberry-illustration" src="images/strawberry-hero.png" width="306" height="507"
                   alt="Нежный пломбир с клубничным джемом.">
               </div>
               <div class="small-icecream">
-                <div class="strawberry-image strawberry-small">
+                <div class="strawberry-small">
                   <img class="icecream-small" src="images/banana-small.png" width="66" height="150"
                     alt="Нежный пломбир с клубничным джемом.">
                 </div>
-                <div class="strawberry-image strawberry-small">
+                <div class="strawberry-small">
                   <img class="icecream-small" src="images/caramel-small.png" width="66" height="150"
                     alt="Нежный пломбир с клубничным джемом.">
                 </div>
@@ -215,7 +210,7 @@
             </div>
             <div class="hero-images">
               <div class="banana-image">
-                <img class="icecream-illustration" src="images/banana-hero.png" width="306" height="507"
+                <img class="banana-illustration" src="images/banana-hero.png" width="306" height="507"
                   alt="Сливочное мороженое со вкусом банана.">
               </div>
               <div class="small-icecream">
@@ -251,7 +246,7 @@
             </div>
             <div class="hero-images">
               <div class="caramel-image">
-                <img class="icecream-illustration" src="images/caramel-hero.png" width="306" height="507"
+                <img class="caramel-illustration" src="images/caramel-hero.png" width="306" height="507"
                   alt="Карамельный пломбир с маршмеллоу">
               </div>
               <div class="small-icecream">
@@ -268,12 +263,20 @@
           </div>
           <!--------- ↑ ↑ СЛАЙД caramel ↑ ↑--------------->
 
+
           <button class="slider-btn left" type="button"><span class="visually-hidden">Перелистывать слайды
               влево.</span></button>
           <button class="slider-btn right" type="button"><span class="visually-hidden">Перелистывать слайды
               вправо.</span></button>
 
-          <ul class="social-networks hero-networks">
+
+
+
+
+
+
+
+          <ul class="hero-networks">
             <li>
               <a href="https://t.me/htmlacademy" class="social-link">
                 <span class="visually-hidden">Магазин мороженого GLLACY в Telegram.</span>
@@ -304,6 +307,10 @@
                 </svg>
               </a>
             </li>
+
+
+
+
           </ul>
 
         </div>
@@ -502,18 +509,20 @@
 
           <li class="subscription-wrapper">
             <div class="subscription-part">
-              <p class="subscription-action">Подпишитесь на нашу сладкую рассылку и будьте всегда<br>
-                в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
-                ерунды.
-                Честно =)</p>
-              <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post" id="sub-form">
-                <label class="visually-hidden" for="subscription-email">Адрес электронной почты для рассылки.</label>
-                <input class="field-line" type="email" placeholder="email@example.com" size="129"
-                  name="subscription-email" id="subscription-email" required>
-                <button class="submit-button" type="submit">
-                  Отправить
-                </button>
-              </form>
+              <div class="subscription-container">
+                <p class="subscription-action">Подпишитесь на нашу сладкую рассылку и будьте всегда<br>
+                  в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
+                  ерунды.
+                  Честно =)</p>
+                <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post" id="sub-form">
+                  <label class="visually-hidden" for="subscription-email">Адрес электронной почты для рассылки.</label>
+                  <input class="field-line" type="email" placeholder="email@example.com" size="129"
+                    name="subscription-email" id="subscription-email" required>
+                  <button class="submit-button" type="submit">
+                    Отправить
+                  </button>
+                </form>
+              </div>
             </div>
           </li>
 
