@@ -7,7 +7,6 @@ let timer = 0;
 let next = document.getElementById('next');
 const slides = document.getElementsByClassName("slider-check") //все радио контролы слайдов
 
-bord = document.querySelector('.button');
 
 //общая функция обновления активного слайда
 function updateActiveSlide(n) {
