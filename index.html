@@ -515,9 +515,9 @@
                   ерунды.
                   Честно =)</p>
                 <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post" id="sub-form">
-                  <label class="visually-hidden" for="subscription-email">Адрес электронной почты для рассылки.</label>
+                  <label class="for-subscription" for="subscription-mail"><span class="visually-hidden"> Адрес электронной почты для рассылки.</span></label>
                   <input class="field-line" type="email" placeholder="email@example.com" size="129"
-                    name="subscription-email" id="subscription-email" required>
+                    name="subscription-email" id="subscription-mail" required>
                   <button class="submit-button" type="submit">
                     Отправить
                   </button>
@@ -709,8 +709,8 @@
 
         <label class="email-label" for="customer-email"><span class="visually-hidden">Почта для обратной
             связи.</span></label>
-        <input class="email-input" type="email" placeholder="email@example.com" size="129" name="email-of-customer"
-          id="customer-email" required>
+        <div class="email-container"><input class="email-input" type="email" placeholder="email@example.com" size="129" name="email-of-customer"
+          id="customer-email" required></div>
 
         <label class="message-label" for="customer-message"><span class="visually-hidden"> Текст сообщения.</span>
         </label>
@@ -729,6 +729,7 @@
     <script src="scripts/feedback-master.js"></script>
     <script src="scripts/nav-master.js"></script>
     <script src="scripts/date-picker.js"></script>
+    <script src="scripts/input-master.js"></script>
 
     <script>
       const input = document.getElementById('delivery-date');
