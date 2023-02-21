@@ -22,7 +22,6 @@
   font-display: swap;
 }
 
-
 html {
   height: 100%;
 }
@@ -317,7 +316,6 @@ img {
   top: 0;
   left: 0;
 }
-
 
 .navigation-item:active {
   background: rgba(252, 252, 252, 1);
@@ -1017,6 +1015,7 @@ img {
   line-height: 46px;
   color: #2D3440;
   margin: 0;
+  margin-top: -2px;
   margin-bottom: 24px;
   flex-wrap: wrap;
 }
@@ -1255,7 +1254,7 @@ img {
 }
 
 .left {
-  top: calc(50% + 5px);
+  top: calc(50% + 3px);
   left: 537.5px;
   background: rgba(252, 252, 252, 0.3);
   border: 2px solid #FCFCFC;
@@ -1264,7 +1263,6 @@ img {
   background-position: center center;
   z-index: 0;
 }
-
 
 .left:hover {
   background: #FCFCFC;
@@ -1301,7 +1299,7 @@ img {
 }
 
 .right {
-  top: calc(50% + 5px);
+  top: calc(50% + 3px);
   left: 849px;
   background: rgba(252, 252, 252, 0.3);
   border: 2px solid #FCFCFC;
@@ -1354,9 +1352,9 @@ img {
   list-style-type: none;
   margin: 0;
   margin-left: 0;
-  bottom: -49px;
-  right: -0.6%;
-  gap: 16px 13.7px;
+  bottom: -48.4px;
+  right: -7px;
+  gap: 16px 11.7px;
   box-sizing: border-box;
   flex-wrap: wrap;
 }
@@ -1446,12 +1444,13 @@ img {
   width: 434px;
   font-weight: 900;
   font-size: 32px;
-  line-height: 47px;
+  line-height: 46px;
   text-align: center;
   color: #2D3440;
   padding: 0 368px;
   margin: 0 auto;
-  margin-bottom: 53px;
+  margin-top: 1px;
+  margin-bottom: 54px;
   flex-wrap: wrap;
 }
 
@@ -1516,9 +1515,9 @@ img {
   line-height: 46px;
   text-align: center;
   color: #2D3440;
-  padding: 0 321.5px;
+  padding: 2px 321.5px 0 321.5px;
   margin: 0 auto;
-  margin-bottom: 57px;
+  margin-bottom: 55px;
   flex-wrap: wrap;
 }
 
@@ -1634,7 +1633,7 @@ img {
   padding: 0;
   width: 32px;
   height: 32px;
-  bottom: 24.4px;
+  bottom: 23.1px;
   left: 198px;
   border-radius: 50%;
   border: 0;
@@ -1704,13 +1703,12 @@ img {
 .advantages-title {
   display: flex;
   width: 995px;
-
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
   text-align: center;
   color: #2D3440;
-  padding: 56px 63.5px;
+  padding: 57px 63.5px 55px 63.5px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -1807,12 +1805,11 @@ img {
 
 .blog-title {
   display: flex;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #565C66;
-  margin-bottom: 12.22px;
+  margin-bottom: 14.22px;
   flex-wrap: wrap;
 }
 
@@ -1844,7 +1841,6 @@ img {
   padding: 26px;
   border-radius: 16px;
   background-color: #FFFFFF;
-
 }
 
 .subscription-container {
@@ -1853,7 +1849,6 @@ img {
 
 .subscription-action {
   display: flex;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -1866,23 +1861,8 @@ img {
 .subscription-form {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-}
-
-.for-subscription::before {
-  position: absolute;
-  content: '';
-  display: var(--display, block);
-  width: 328px;
-  height: 44px;
-  border: var(--border, 2px solid transparent);
-  top: 2px;
-  left: 7px;
-  background-color: transparent;
-  border-radius: 4px;
-  pointer-events: none;
-  transition: 0.4s;
 }
 
 .field-line {
@@ -1891,7 +1871,7 @@ img {
   width: 332px;
   height: 48px;
   background: #FFFFFF;
-  border: var(--border-original, 1px solid #B9B9B9);
+  border: var(--border-original, 1px solid var(--color-invalid, #B9B9B9));
   font-family: 'Inter', sans-serif;
   color: #2D3440;
   font-weight: 400;
@@ -1899,6 +1879,7 @@ img {
   line-height: 20px;
   border-radius: 4px;
   margin: 0;
+  margin-right: 14.9px;
   padding: 0 16px;
   box-sizing: border-box;
   outline: none;
@@ -1912,11 +1893,34 @@ img {
 }
 
 .field-line:hover {
-  border: var(--border-hover, 1px solid #2D3440);
+  border: var(--border-hover, 1px solid var(--color-invalid, #2D3440));
 }
 
 .field-line:focus-visible {
   outline: none;
+}
+
+.fieldline-container {
+  position: relative;
+}
+
+.fieldline-container:focus-within::before {
+  position: absolute;
+  content: '';
+  display: var(--display-before, block);
+  width: 328px;
+  height: 44px;
+  border: var(--border-before, 2px solid var(--color-invalid, #2D3440));
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border-radius: 4px;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.fieldline-container:focus-within > .field-line {
+  border: 1px solid transparent;
 }
 
 .submit-button {
@@ -1993,7 +1997,6 @@ img {
   background: #B9B9B9;
   border: 4px solid rgba(185, 185, 185, 0.3);
   border-radius: 26px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -2040,7 +2043,6 @@ img {
 
 .delivery-details {
   display: flex;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -2062,7 +2064,6 @@ img {
 
 .delivery-action {
   display: flex;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -2120,6 +2121,32 @@ img {
   opacity: 0;
   cursor: pointer;
   text-align: center;
+}
+
+.phone-input[value] {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.phone-placeholder {
+  position: absolute;
+  display: var(--display-placeholder, flex);
+  align-items: center;
+  height: 40px;
+  bottom: 218px;
+  left: 179px;
+  padding: 0 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B9B9B9;
+  background: #FFFFFF;
+  pointer-events: none;
+  transition: 0.4s;
 }
 
 .phone-input::placeholder,
@@ -2190,7 +2217,6 @@ img {
   transition: 0.4s;
 }
 
-
 .date-input,
 .phone-input,
 .address-input {
@@ -2213,7 +2239,7 @@ img {
 }
 
 .date-input {
-  padding: 0 15.5px 0 15px;
+  padding: 0 14px 0 14px;
 }
 
 .date-input:hover,
@@ -2236,7 +2262,7 @@ img {
 .delivery-info {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 5.3px;
   flex-wrap: wrap;
 }
 
@@ -2372,6 +2398,10 @@ img {
   display: flex;
 }
 
+.delivery-button {
+  padding: 14px 32.5px 14px 33px;
+}
+
 /*--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ --------------- DELIVERY ---------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------*/
 
 
@@ -2405,7 +2435,6 @@ img {
 
 .contacts-title {
   display: flex;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -2520,7 +2549,6 @@ img {
   position: relative;
   display: flex;
   padding-left: 24px;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -2530,7 +2558,6 @@ img {
 }
 
 .footer-item:nth-child(1) > .footer-link {
-
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
@@ -2557,7 +2584,6 @@ img {
   position: relative;
   display: flex;
   text-decoration: none;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -2593,7 +2619,6 @@ img {
   display: flex;
   flex-direction: column;
   width: 193px;
-
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -2752,8 +2777,6 @@ img {
   transition: 0.4s;
 }
 
-
-
 .message-label::before {
   position: absolute;
   content: '';
@@ -2869,9 +2892,8 @@ img {
 }
 
 .email-container:focus-within > .email-input {
-  border:  1px solid transparent;
+  border: 1px solid transparent;
 }
-
 
 .surname-input:hover,
 .message-input:hover {
@@ -2883,42 +2905,6 @@ img {
 .message-input:focus-visible {
   outline: none;
 }
-
-/* .email-input:valid,
-.email-input:hover:valid {
-  outline: none;
-  border: 1px solid #08AF00;
-}
-
-.email-input:valid,
-.email-input:focus:valid {
-  outline: none;
-  border: 2px solid #08AF00;
-} */
-/* .email-container {
-  position: relative;
-} */
-
-
-/* .email-input:valid .email-container::before   {
-  position: absolute;
-  content: '';
-  display: var(--display-after, block);
-  width: 440px;
-  height: 46px;
-  border: var(--border-after, 2px solid green);
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  border-radius: 4px;
-  pointer-events: none;
-  transition: 0.4s;
-} */
-
-/* .email-input:focus:valid + .mail-error-msg {
-  color: #08AF00;
-} */
-
 
 .close-button {
   position: absolute;
@@ -3165,7 +3151,6 @@ img {
   cursor: default;
 }
 
-
 .back-btn {
   position: absolute;
   display: flex;
@@ -3229,6 +3214,10 @@ img {
   border: 0;
   outline: none;
   cursor: default;
+}
+
+.show-more {
+  padding: 13.8px 32px 13px 34px;
 }
 
 

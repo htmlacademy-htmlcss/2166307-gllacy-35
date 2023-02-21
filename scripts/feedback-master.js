@@ -1,15 +1,13 @@
 //-----------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------- ОТКРЫТИЕ-ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ----------------------------------------------
 
+
+
 var OpenWinEvent = document.querySelectorAll('.feedback-btn')[0];
 OpenWinEvent.addEventListener('click', showModalWin)
 
 function showModalWin() {
-
   var darkLayer = document.querySelectorAll('.shadow')[0]; // слой затемнения
-
   document.querySelectorAll('.shadow')[0].style.setProperty('--display', 'block'); // делаем полупрозрачный фон видимым
-
-
   var modalWin = document.getElementById('popupWin'); // находим наше окошко
   modalWin.style.display = 'block'; // делаем его видимым
 
@@ -27,6 +25,10 @@ closeWinEvent.addEventListener('click', function () {  // обработчик �
   document.querySelectorAll('.shadow')[0].style.setProperty('--display', 'none'); // убираем полупрозрачный фон
   document.getElementById('feedback-window').reset() // делаем сброс формы перед выключением модального окна
   modalWin.style.display = 'none'; // выключаем модальное окно
+
+  ValidateAccess = false; // возвращаем флаг для обработки input email в исходное состояние
+  document.querySelector('.email-input').style.setProperty("--color-invalid", "#B9B9B9"); // ставим исходный черный цвет на бордер input-mail
+  document.querySelector('.email-container').style.setProperty("--color-invalid", "#2D3440"); // ставим исходный черный цвет на фокус input-mail
   return false;
 });
 
@@ -36,6 +38,10 @@ document.addEventListener('keydown', function (e) {
     var modalWin = document.getElementById('popupWin'); // находим наше окошко
     document.querySelectorAll('.shadow')[0].style.setProperty('--display', 'none'); // убираем полупрозрачный фон
     document.getElementById('feedback-window').reset() // делаем сброс формы перед выключением модального окна
+
+    ValidateAccess = false; // возвращаем флаг для обработки input email в исходное состояние
+    document.querySelector('.email-input').style.setProperty("--color-invalid", "#B9B9B9"); // ставим исходный черный цвет на бордер input-mail
+    document.querySelector('.email-container').style.setProperty("--color-invalid", "#2D3440"); // ставим исходный черный цвет на фокус input-mail
     modalWin.style.display = 'none'; // выключаем модальное окно
   }
 });

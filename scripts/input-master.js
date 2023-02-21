@@ -1,3 +1,6 @@
+var ValidateAccess = false;
+var SubscriptionAccess = false;
+
 var SearchEvent = document.querySelector('.search-line');
 var LoginEvent = document.querySelector('.login-line');
 var PasswordEvent = document.querySelector('.password-line');
@@ -6,8 +9,11 @@ var DateEvent = document.querySelector('.date-input');
 var PhoneEvent = document.querySelector('.phone-input');
 var AddressEvent = document.querySelector('.address-input');
 var SurnameEvent = document.querySelector('.surname-input');
-var EmailEvent = document.querySelector('.email-input');
 var MsgEvent = document.querySelector('.message-input');
+var EmailEvent = document.querySelector('.email-input');
+
+
+
 
 /////////////////////////////////////////////////////////
 
@@ -56,18 +62,18 @@ function BlurPassword() {
 
 //////////////////////////////////////////////////////////
 
-SubscriptionEvent.addEventListener('focus', function () {
-  document.querySelector('.for-subscription').style.setProperty("--border", "2px solid #2D3440");
-  document.querySelector('.field-line').style.setProperty("--border-original", "1px solid transparent");
-  document.querySelector('.field-line').style.setProperty("--border-hover", "1px solid transparent");
-});
-SubscriptionEvent.addEventListener('blur', BlurSubscription);
-SubscriptionEvent.addEventListener('input', BlurSubscription);
-function BlurSubscription() {
-  document.querySelector('.for-subscription').style.setProperty("--border", "2px solid transparent");
-  document.querySelector('.field-line').style.setProperty("--border-original", "1px solid #B9B9B9");
-  document.querySelector('.field-line').style.setProperty("--border-hover", "1px solid #2D3440");
-}
+// SubscriptionEvent.addEventListener('focus', function () {
+//   document.querySelector('.for-subscription').style.setProperty("--border", "2px solid #2D3440");
+//   document.querySelector('.field-line').style.setProperty("--border-original", "1px solid transparent");
+//   document.querySelector('.field-line').style.setProperty("--border-hover", "1px solid transparent");
+// });
+// SubscriptionEvent.addEventListener('blur', BlurSubscription);
+// SubscriptionEvent.addEventListener('input', BlurSubscription);
+// function BlurSubscription() {
+//   document.querySelector('.for-subscription').style.setProperty("--border", "2px solid transparent");
+//   document.querySelector('.field-line').style.setProperty("--border-original", "1px solid #B9B9B9");
+//   document.querySelector('.field-line').style.setProperty("--border-hover", "1px solid #2D3440");
+// }
 
 //////////////////////////////////////////////////////////
 
@@ -90,6 +96,7 @@ PhoneEvent.addEventListener('focus', function () {
   document.querySelector('.phone-label').style.setProperty("--border", "2px solid #2D3440");
   document.querySelector('.phone-input').style.setProperty("--border-original", "1px solid transparent");
   document.querySelector('.phone-input').style.setProperty("--border-hover", "1px solid transparent");
+  document.querySelector('.phone-placeholder').style.setProperty("--display-placeholder", "none");
 });
 PhoneEvent.addEventListener('blur', BlurPhone);
 PhoneEvent.addEventListener('input', BlurPhone);
@@ -146,23 +153,22 @@ function BlurMessage() {
   document.querySelector('.message-input').style.setProperty("--border-hover", "1px solid #2D3440");
 }
 
-//////////////////////////////////////////////////////////
 
-
-
-
-
-//////////////////////////////////////////////////////
+////////////////////////////////////////
 
 EmailEvent.addEventListener('invalid', function (){
 
   document.querySelector('.email-input').style.setProperty("--color-invalid", "#EA5454");
   document.querySelector('.email-container').style.setProperty("--color-invalid", "#EA5454");
+  ValidateAccess = true;
+});
 
-      EmailEvent.addEventListener('input', (e) => {      //  непрерывно проверяем валидность емейла
-            const isValid = e.target.checkValidity();        //  при вводе каждого символа в емейл-инпут
-    if ( isValid == false)
-   {
+  EmailEvent.addEventListener('input', (e) => {
+    if (ValidateAccess) {
+    isValid = e.target.checkValidity();
+
+
+    if ( isValid == false) {
     document.querySelector('.email-input').style.setProperty("--color-invalid", "#EA5454");
   document.querySelector('.email-container').style.setProperty("--color-invalid", "#EA5454");
       }
@@ -170,22 +176,34 @@ EmailEvent.addEventListener('invalid', function (){
      document.querySelector('.email-input').style.setProperty("--color-invalid", "#2D3440");
   document.querySelector('.email-container').style.setProperty("--color-invalid", "#2D3440");
    }
-return 0;
 
-              });
+  }}
+
+  );
+
+  ////////////////////////////////////////
+
+  SubscriptionEvent.addEventListener('invalid', function (){
+
+  document.querySelector('.field-line').style.setProperty("--color-invalid", "#EA5454");
+  document.querySelector('.fieldline-container').style.setProperty("--color-invalid", "#EA5454");
+  SubscriptionAccess = true;
 });
 
-///////////////////////////////////////////////////////
+SubscriptionEvent.addEventListener('input', (e) => {
+    if (SubscriptionAccess) {
+    isValid = e.target.checkValidity();
 
-// EmailEvent.addEventListener('focus', function () {
-//   document.querySelector('.email-label').style.setProperty("--border-before", "2px solid #2D3440");
-//   document.querySelector('.email-input').style.setProperty("--border-original", "1px solid transparent");
-//   document.querySelector('.email-input').style.setProperty("--border-hover", "1px solid transparent");
-// });
-// EmailEvent.addEventListener('blur', BlurEmail);
-// EmailEvent.addEventListener('input', BlurEmail);
-// function BlurEmail() {
-//   document.querySelector('.email-label').style.setProperty("--border-before", "2px solid transparent");
-//   document.querySelector('.email-input').style.setProperty("--border-original", "1px solid #B9B9B9");
-//   document.querySelector('.email-input').style.setProperty("--border-hover", "1px solid #2D3440");
-// }
+
+    if ( isValid == false) {
+    document.querySelector('.field-line').style.setProperty("--color-invalid", "#EA5454");
+  document.querySelector('.fieldline-container').style.setProperty("--color-invalid", "#EA5454");
+      }
+    else {
+     document.querySelector('.field-line').style.setProperty("--color-invalid", "#2D3440");
+  document.querySelector('.fieldline-container').style.setProperty("--color-invalid", "#2D3440");
+   }
+
+  }}
+
+  );
