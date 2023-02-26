@@ -88,7 +88,7 @@
 
 			// Get Default value (caption)
 			var caption = null;
-			var cells = item.getElementsByTagName('option');
+      var cells = item.getElementsByClassName("product-options-item");
 			for (var i = 0; i < cells.length; i++) {
 				caption = cells[0].innerHTML;
 				if(cells[i].hasAttribute('selected')) {
@@ -99,7 +99,8 @@
 
 			// Get select options
 			var options = '<div class="initial-select" data-cuteselect-title>' + caption + '</div><div data-cuteselect-options><div data-cuteselect-options-container>';
-			var cells = item.getElementsByTagName('option');
+      var cells = item.getElementsByClassName("product-options-item");
+
 			for (var i = 0; i < cells.length; i++) {
 				if(cells[i].hasAttribute('disabled')) { continue; }
 				if(cells[i].hasAttribute('class')) { var optionStyle = ' class="' + cells[i].getAttribute('class') + '"'; } else { var optionStyle = ''; }
@@ -122,7 +123,7 @@
 		show: function(item) {
 			if(item.parentNode.hasAttribute('data-cuteselect-item')) { var source = item.parentNode.getAttribute('data-cuteselect-item'); }
 			else { var source = item.getAttribute('data-cuteselect-item'); }
-			var cells = document.getElementsByTagName('select');
+      var cells = document.getElementsByClassName("product-options");
 			if(item.hasAttribute('data-cuteselect-title')) {
 				item = item.parentNode;
 				var cells = item.getElementsByTagName('div');
@@ -156,7 +157,8 @@
 			}
 
 			// Real select
-			var cells = document.getElementsByTagName('select');
+         var cells = document.getElementsByClassName("product-options");
+
 			for (var i = 0; i < cells.length; i++) {
 				var source = cells[i].getAttribute('data-cuteselect-target');
 				if(source == target) { cells[i].value = value; }
@@ -171,7 +173,7 @@
 
 	CuteSelect.event = {
 		parse: function() {
-			var cells = document.getElementsByTagName('select');
+      var cells = document.getElementsByClassName("product-options");
 			for (var i = 0; i < cells.length; i++) { CuteSelect.tools.createSelect(cells[i]); }
 		},
 		listen: function() {

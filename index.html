@@ -8,6 +8,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+
   </head>
 
   <body class="mybody">
@@ -27,7 +28,7 @@
             <button class="catalog-button" id="catalog-btn" type="button" value="off">Каталог</button>
             <!------------  Выпадающее меню Каталог------------>
             <div class="catalog-menu">
-              <span class="catalog-novelties">Новинки</span>
+              <a href="" class="catalog-novelties ">Новинки</a>
               <ul class="menu-list">
                 <li class="catalog-item"><a class="catalog-item-link" href="catalog.html">Сливочное</a></li>
                 <li class="catalog-item"><a class="catalog-item-link" href="index.html">Щербеты</a></li>
@@ -48,8 +49,8 @@
           <!------------  Поиск по сайту------------>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="for-search" for="search-target"><span class="visually-hidden">Поиск по сайту.</span></label>
-            <input class="search-line" placeholder="Поиск по сайту" type="text" name="search-request" id="search-target"
-              autocomplete="off" required>
+            <input class="search-line" placeholder="Поиск по сайту" type="search" name="search-request"
+              id="search-target" autocomplete="off" required>
           </form>
           <!------------  Поиск по сайту------------>
           <button class="login-button" id="login-btn" type="button" value="off">Вход</button>
@@ -147,7 +148,10 @@
 
       <h1 class="visually-hidden"> Интернет-магазин Глейси.</h1>
 
+
+
       <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ HERO БЛОК -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
+
       <section class="hero-section">
 
         <h2 class="visually-hidden"> Топовые продукты.</h2>
@@ -155,125 +159,82 @@
         <div class="slider-container">
 
           <!------------- ↓ ↓ СЛАЙД STRAWBERRY ↓ ↓----------->
-
-          <input class="slider-check first" type="radio" name="slider-check" value="1" id="top-strawberry" checked>
-          <label class="slider-label first" for="top-strawberry"><span
-              class="visually-hidden">Клубничное.</span></label>
-
-          <div class="slider-content">
-
+          <div class="slider-content ">
             <div class="hero-info">
-
               <h3 class="hero-title"> Нежный пломбир<br> с клубничным джемом</h3>
-
               <p class="hero-description">Натуральное мороженое из свежих сливок<br>
                 и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
               <a href="#" class="button">Заказать</a>
-
-            </div>
-            <div class="hero-images">
-              <div class="strawberry-image">
-                <img class="strawberry-illustration" src="images/strawberry-hero.png" width="306" height="507"
-                  alt="Нежный пломбир с клубничным джемом.">
-              </div>
-              <div class="small-icecream">
-                <div class="strawberry-small">
-                  <img class="icecream-small" src="images/banana-small.png" width="66" height="150"
-                    alt="Нежный пломбир с клубничным джемом.">
-                </div>
-                <div class="strawberry-small">
-                  <img class="icecream-small" src="images/caramel-small.png" width="66" height="150"
-                    alt="Нежный пломбир с клубничным джемом.">
-                </div>
-              </div>
             </div>
           </div>
           <!------------ ↑ ↑ СЛАЙД STRAWBERRY  ↑ ↑----------->
 
-          <!------------- ↓ ↓ СЛАЙД BANANA ↓ ↓----------->
-
-          <input class="slider-check second" type="radio" name="slider-check" value="2" id="top-banana">
-          <label class="slider-label second" for="top-banana"> <span class="visually-hidden">Банановое.</span></label>
-
+          <!------------- ↓ ↓ СЛАЙД BANANA ↓ ↓--------------->
           <div class="slider-content">
-
             <div class="hero-info">
-
               <h3 class="hero-title">Сливочное мороженое со вкусом банана</h3>
-
               <p class="hero-description">
                 Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий
                 летний день.
               </p>
               <a href="#" class="button hero-button">Заказать</a>
-
-            </div>
-            <div class="hero-images">
-              <div class="banana-image">
-                <img class="banana-illustration" src="images/banana-hero.png" width="306" height="507"
-                  alt="Сливочное мороженое со вкусом банана.">
-              </div>
-              <div class="small-icecream">
-                <div class="strawberry-image banana-small">
-                  <img class="icecream-small" src="images/caramel-small.png" width="66" height="150"
-                    alt="Нежный пломбир с клубничным джемом.">
-                </div>
-                <div class="strawberry-image banana-small">
-                  <img class="icecream-small" src="images/strawberry-small.png" width="66" height="150"
-                    alt="Нежный пломбир с клубничным джемом.">
-                </div>
-              </div>
             </div>
           </div>
-          <!----------- ↑ ↑ СЛАЙД BANANA ↑ ↑------------->
+          <!----------- ↑ ↑ СЛАЙД BANANA ↑ ↑-------------->
 
           <!---------- ↓ ↓ СЛАЙД caramel ↓ ↓-------------->
-
-          <input class="slider-check third" type="radio" name="slider-check" value="3" id="top-caramel">
-          <label class="slider-label third" for="top-caramel"><span class="visually-hidden">Карамельное.</span></label>
-
           <div class="slider-content">
-
             <div class="hero-info">
-
               <h3 class="hero-title">Карамельный пломбир<br> с маршмеллоу</h3>
               <p class="hero-description">
                 Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет<br> сердца сладкоежек всех
                 возрастов.
               </p>
               <a href="#" class="button hero-button">Заказать</a>
-
             </div>
-            <div class="hero-images">
-              <div class="caramel-image">
-                <img class="caramel-illustration" src="images/caramel-hero.png" width="306" height="507"
-                  alt="Карамельный пломбир с маршмеллоу">
+          </div>
+          <!--------- ↑ ↑ СЛАЙД caramel ↑ ↑----------------->
+
+
+          <!--------- ↓ ↓ Иллюстрации к слайдам ↓ ↓---------->
+          <div class="icecream-list">
+            <div class="icecream-image">
+              <div class="ball-item">
+                <img class="illustration" src="images/strawberry-hero.png" width="306" height="507"
+                  alt="Нежный пломбир с клубничным джемом.">
               </div>
-              <div class="small-icecream">
-                <div class="strawberry-image caramel-small">
-                  <img class="icecream-small" src="images/strawberry-small.png" width="66" height="150"
-                    alt="Нежный пломбир с клубничным джемом.">
-                </div>
-                <div class="strawberry-image caramel-small">
-                  <img class="icecream-small" src="images/banana-small.png" width="66" height="150"
-                    alt="Нежный пломбир с клубничным джемом.">
-                </div>
+            </div>
+            <div class="icecream-image">
+              <div class="ball-item">
+                <img class="illustration" src="images/banana-hero.png" width="306" height="507"
+                  alt="Сливочное мороженое со вкусом банана.">
+              </div>
+            </div>
+            <div class="icecream-image">
+              <div class="ball-item">
+                <img class="illustration" src="images/caramel-hero.png" width="306" height="507"
+                  alt="Карамельный пломбир с маршмеллоу">
               </div>
             </div>
           </div>
-          <!--------- ↑ ↑ СЛАЙД caramel ↑ ↑--------------->
+          <!--------- ↑ ↑  Иллюстрации к слайдам ↑ ↑----------------->
 
+
+          <!----------↓ ↓  Пагинация слайдера: точки-кружочки ↓ ↓ ------>
+          <ul class="dots-pagination">
+            <li class="dots-item"><button class="dot" type="button"><span class="visually-hidden">Включить слайд с
+                  клубничным мороженым.</span></button></li>
+            <li class="dots-item"><button class="dot" type="button"><span class="visually-hidden">Включить слайд с
+                  банановым мороженым.</span></button></li>
+            <li class="dots-item"><button class="dot" type="button"><span class="visually-hidden">Включить слайд с
+                  карамельным мороженым.</span></button></li>
+          </ul>
+          <!----------↑ ↑  Пагинация слайдера: точки-кружочки ↑ ↑ ------>
 
           <button class="slider-btn left" type="button"><span class="visually-hidden">Перелистывать слайды
               влево.</span></button>
           <button class="slider-btn right" type="button"><span class="visually-hidden">Перелистывать слайды
-              вправо.</span></button>
-
-
-
-
-
-
+              влево.</span></button>
 
 
           <ul class="hero-networks">
@@ -307,16 +268,10 @@
                 </svg>
               </a>
             </li>
-
-
-
-
           </ul>
-
         </div>
 
       </section>
-
       <!--------- -↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ----------- HERO БЛОК -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑----------->
 
 
@@ -368,7 +323,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/raspberry-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/raspberry-icecream.jpg" width="168" height="168"
                   alt="Малиновое мороженое.">
               </div>
               <div class="best-details">
@@ -387,7 +342,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/pistachio-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/pistachio-icecream.jpg" width="168" height="168"
                   alt="Фисташковое мороженое.">
               </div>
               <div class="best-details">
@@ -406,7 +361,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/blueberry-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/blueberry-icecream.jpg" width="168" height="168"
                   alt="Черничное мороженое.">
               </div>
               <div class="best-details">
@@ -425,7 +380,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/bubblegum-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/bubblegum-icecream.jpg" width="168" height="168"
                   alt="Мороженое с подсыпкой Бабл-гам.">
               </div>
               <div class="best-details">
@@ -492,9 +447,6 @@
 
       <!-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------ SUBSCRIPTION -----------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ---------->
 
-
-
-
       <section>
 
         <h2 class="visually-hidden">Блог и подписка</h2>
@@ -534,7 +486,6 @@
         </ul>
 
       </section>
-
 
       <!-------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ------------ SUBSCRIPTION -----------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑----------->
 
@@ -591,7 +542,8 @@
               name="address-of-customer" id="customer-address" required>
           </div>
 
-          <div class="button-container"><button class="submit-button delivery-button" type="submit">Отправить</button></div>
+          <div class="button-container"><button class="submit-button delivery-button" type="submit">Отправить</button>
+          </div>
         </form>
 
       </section>
@@ -730,12 +682,14 @@
     <div class="shadow"></div>
 
     <!--   ========================================================================================================  -->
-    <script src="scripts/slider-master.js"></script>
+    <!-- <script src="scripts/slider-master.js"></script> -->
     <script src="scripts/feedback-master.js"></script>
     <script src="scripts/nav-master.js"></script>
     <script src="scripts/date-picker.js"></script>
     <script src="scripts/input-master.js"></script>
     <script src="scripts/phone-mask.js"></script>
+    <script src="scripts/buttons-slider.js"></script>
+
 
 
     <!--↓ ↓-- инициализация DATE picker --↓ ↓-->

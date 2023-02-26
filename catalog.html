@@ -27,7 +27,7 @@
             <button class="catalog-button" id="catalog-btn" type="button" value="off">Каталог</button>
             <!------------  Выпадающее меню Каталог------------>
             <div class="catalog-menu">
-              <span class="catalog-novelties">Новинки</span>
+              <a href="" class="catalog-novelties ">Новинки</a>
               <ul class="menu-list">
                 <li class="catalog-item"><a class="catalog-item-link" href="catalog.html">Сливочное</a></li>
                 <li class="catalog-item"><a class="catalog-item-link" href="index.html">Щербеты</a></li>
@@ -39,7 +39,6 @@
             <a class="navigation-item" href="">Доставка и оплата</a>
             <a class="navigation-item" href="">О компании</a>
           </nav>
-
         </div>
 
         <div class="user-menu">
@@ -49,12 +48,10 @@
           <!------------  Поиск по сайту------------>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="for-search" for="search-target"><span class="visually-hidden">Поиск по сайту.</span></label>
-            <input class="search-line" placeholder="Поиск по сайту" type="text" name="search-request" id="search-target"
-              autocomplete="off" required>
+            <input class="search-line" placeholder="Поиск по сайту" type="search" name="search-request"
+              id="search-target" autocomplete="off" required>
           </form>
           <!------------  Поиск по сайту------------>
-
-
           <button class="login-button" id="login-btn" type="button" value="off">Вход</button>
           <!------------  Форма авторизации ------------>
           <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -81,11 +78,10 @@
           </form>
           <!------------  Форма авторизации ------------>
 
-
-
           <button class="basket-button" id="basket-btn" type="button" value="off"><span
               class="visually-hidden">Открывает корзину.</span>2
             товара</button>
+
           <!------------  Корзина ------------>
           <div class="basket-form" role="dialog" id="prebasket">
             <span class="basket-title">Корзина</span>
@@ -196,7 +192,7 @@
               <h3 class="area-title">Сортировка:</h3>
 
               <div class="goods-options">
-                <select class="product-options">
+                <select class="product-options" id="select-menu" name="product-selection">
                   <option class="product-options-item" value="top" selected>по популярности</option>
                   <option class="product-options-item" value="expensive">сначала дорогие</option>
                   <option class="product-options-item" value="cheap">сначала дешевые</option>
@@ -268,10 +264,8 @@
                   <label class="fatness-radio over-radio" for="fatness-over"><span class="label-over">выше
                       30%</span></label>
                 </div>
-
               </div>
             </div>
-
           </div>
 
           <div class="checkbox-line">
@@ -305,7 +299,6 @@
                     id="jams-additives">
                   <label class="additive-checkbox jams-box" for="jams-additives">джемы</label>
                 </div>
-
               </div>
             </div>
             <button class="button-filter" type="submit">Применить</button>
@@ -330,7 +323,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/raspberry-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/raspberry-icecream.jpg" width="168" height="168"
                   alt="Малиновое мороженое.">
               </div>
               <div class="best-details">
@@ -347,7 +340,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/pistachio-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/pistachio-icecream.jpg" width="168" height="168"
                   alt="Фисташковое мороженое.">
               </div>
               <div class="best-details">
@@ -365,7 +358,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/blueberry-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/blueberry-icecream.jpg" width="168" height="168"
                   alt="Черничное мороженое.">
               </div>
               <div class="best-details">
@@ -383,7 +376,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/bubblegum-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/bubblegum-icecream.jpg" width="168" height="168"
                   alt="Мороженое с подсыпкой Бабл-гам.">
               </div>
               <div class="best-details">
@@ -401,7 +394,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/blackberry-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/blackberry-icecream.jpg" width="168" height="168"
                   alt="Ежевичное мороженое.">
               </div>
               <div class="best-details">
@@ -419,7 +412,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/banana-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/banana-icecream.jpg" width="168" height="168"
                   alt="Банановое мороженое.">
               </div>
               <div class="best-details">
@@ -437,7 +430,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/chocolate-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/chocolate-icecream.jpg" width="168" height="168"
                   alt="Шоколадное мороженое.">
               </div>
               <div class="best-details">
@@ -455,7 +448,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/strawberry-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/strawberry-icecream.jpg" width="168" height="168"
                   alt="Клубничное мороженое.">
               </div>
               <div class="best-details">
@@ -473,7 +466,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/lemon-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/lemon-icecream.jpg" width="168" height="168"
                   alt="Освежающий лимонный сорбет.">
               </div>
               <div class="best-details">
@@ -491,7 +484,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/menthol-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/menthol-icecream.jpg" width="168" height="168"
                   alt="Сливочный пломбир с ментоловым сиропом.">
               </div>
               <div class="best-details">
@@ -509,7 +502,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/nut-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/nut-icecream.jpg" width="168" height="168"
                   alt="Фисташковый пломбир с шоколадным сиропом.">
               </div>
               <div class="best-details">
@@ -527,7 +520,7 @@
           <li class="best-item">
             <a class="product-button" href="">
               <div class="best-mask">
-                <img class="best-icecream" src="images/products/cremebrulee-icecream.png" width="168" height="168"
+                <img class="best-icecream" src="images/products/cremebrulee-icecream.jpg" width="168" height="168"
                   alt="Классическое крем-брюле.">
               </div>
               <div class="best-details">
