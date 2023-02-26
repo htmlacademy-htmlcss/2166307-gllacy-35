@@ -12,134 +12,134 @@
 
   <body>
 
-   <!--- ========================================= HEADER ==================================================-->
-   <header>
+    <!--- ========================================= HEADER ==================================================-->
+    <header>
 
-    <div class="header-wrapper">
+      <div class="header-wrapper">
 
-      <div class="nav-container">
-        <a class="logo-link" href="index.html">
-          <img class="gllacy-logo" src="images/gllacy-logo.svg" width="137" height="56"
-            alt="Логотип интернет магазина Глейси.">
-        </a>
+        <div class="nav-container">
+          <a class="logo-link" href="index.html">
+            <img class="gllacy-logo" src="images/gllacy-logo.svg" width="137" height="56"
+              alt="Логотип интернет магазина Глейси.">
+          </a>
 
-        <nav class="navigation">
-          <button class="catalog-button" id="catalog-btn" type="button" value="off">Каталог</button>
-          <!------------  Выпадающее меню Каталог------------>
-          <div class="catalog-menu">
-            <a href="" class="catalog-novelties ">Новинки</a>
-            <ul class="menu-list">
-              <li class="catalog-item"><a class="catalog-item-link" href="catalog.html">Сливочное</a></li>
-              <li class="catalog-item"><a class="catalog-item-link" href="index.html">Щербеты</a></li>
-              <li class="catalog-item"><a class="catalog-item-link" href="">Фруктовый лед</a></li>
-              <li class="catalog-item"><a class="catalog-item-link" href="">Мелорин</a></li>
+          <nav class="navigation">
+            <button class="catalog-button" id="catalog-btn" type="button" value="off">Каталог</button>
+            <!------------  Выпадающее меню Каталог------------>
+            <div class="catalog-menu">
+              <a href="" class="catalog-novelties ">Новинки</a>
+              <ul class="menu-list">
+                <li class="catalog-item"><a class="catalog-item-link" href="catalog.html">Сливочное</a></li>
+                <li class="catalog-item"><a class="catalog-item-link" href="index.html">Щербеты</a></li>
+                <li class="catalog-item"><a class="catalog-item-link" href="">Фруктовый лед</a></li>
+                <li class="catalog-item"><a class="catalog-item-link" href="">Мелорин</a></li>
+              </ul>
+            </div>
+            <!------------  Выпадающее меню Каталог------------>
+            <a class="navigation-item" href="">Доставка и оплата</a>
+            <a class="navigation-item" href="">О компании</a>
+          </nav>
+        </div>
+
+        <div class="user-menu">
+          <a class="text-link" href="tel:+78005558628">+7 800 555-86-28</a>
+          <button class="search-button" id="search-btn" type="button" value="off"><span class="visually-hidden">Поиск по
+              сайту.</span></button>
+          <!------------  Поиск по сайту------------>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="for-search" for="search-target"><span class="visually-hidden">Поиск по сайту.</span></label>
+            <input class="search-line" placeholder="Поиск по сайту" type="search" name="search-request"
+              id="search-target" autocomplete="off" required>
+          </form>
+          <!------------  Поиск по сайту------------>
+          <button class="login-button" id="login-btn" type="button" value="off">Вход</button>
+          <!------------  Форма авторизации ------------>
+          <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="login-title">Личный кабинет</span>
+            <label class="for-login" for="login-target"><span class="visually-hidden">Логин для входа в личный кабинет
+                на сайте.</span></label>
+            <input class="login-line" placeholder="email@example.com" type="email" name="login-input" id="login-target"
+              autocomplete="off" required>
+
+            <label class="for-password" for="password-target"><span class="visually-hidden">Пароль для входа в личный
+                кабинет на сайте.</span></label>
+            <input class="password-line" placeholder="Введите пароль" type="password" name="password-input"
+              id="password-target" autocomplete="off" required>
+
+            <div class="submit-part">
+              <button class="submit-button login-submit" type="submit">
+                Войти
+              </button>
+              <div class="recovery-registration">
+                <a class="text-link re-link" href="">Забыли пароль?</a>
+                <a class="text-link re-link" href="">Регистрация</a>
+              </div>
+            </div>
+          </form>
+          <!------------  Форма авторизации ------------>
+
+          <button class="basket-button" id="basket-btn" type="button" value="off"><span
+              class="visually-hidden">Открывает корзину.</span>2
+            товара</button>
+
+          <!------------  Корзина ------------>
+          <div class="basket-form" role="dialog" id="prebasket">
+            <span class="basket-title">Корзина</span>
+
+            <ul class="basket-list">
+
+              <li class="basket-item">
+                <a class="basket-item-link" href="">
+                  <img class="basket-pic" src="images/malinka-basket.png" width="46" height="46"
+                    alt="Мороженое со вкусом Малины">
+                  <div class="line-description">
+                    <span class="line-product">Малинка</span>
+                    <span class="line-qty">1 кг х 310 ₽</span>
+                  </div>
+                  <div class="line-amont">
+                    310 ₽
+                  </div>
+                </a>
+                <button class="delete-btn" type="button"><span class=visually-hidden>Удалить позицию из
+                    корзины.</span></button>
+              </li>
+
+              <li class="basket-item">
+                <a class="basket-item-link" href="">
+                  <img class="basket-pic" src="images/bublegum-basket.png" width="46" height="46"
+                    alt="Мороженое со вкусом Малины">
+                  <div class="line-description">
+                    <span class="line-product">Бабл-гам</span>
+                    <span class="line-qty">1,5 кг х 320 ₽</span>
+                  </div>
+                  <div class="line-amont">
+                    480 ₽
+                  </div>
+                </a>
+                <button class="delete-btn" type="button"><span class=visually-hidden>Удалить позицию из
+                    корзины.</span></button>
+              </li>
+
             </ul>
-          </div>
-          <!------------  Выпадающее меню Каталог------------>
-          <a class="navigation-item" href="">Доставка и оплата</a>
-          <a class="navigation-item" href="">О компании</a>
-        </nav>
-      </div>
-
-      <div class="user-menu">
-        <a class="text-link" href="tel:+78005558628">+7 800 555-86-28</a>
-        <button class="search-button" id="search-btn" type="button" value="off"><span class="visually-hidden">Поиск по
-            сайту.</span></button>
-        <!------------  Поиск по сайту------------>
-        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="for-search" for="search-target"><span class="visually-hidden">Поиск по сайту.</span></label>
-          <input class="search-line" placeholder="Поиск по сайту" type="search" name="search-request" id="search-target"
-            autocomplete="off" required>
-        </form>
-        <!------------  Поиск по сайту------------>
-        <button class="login-button" id="login-btn" type="button" value="off">Вход</button>
-        <!------------  Форма авторизации ------------>
-        <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
-          <span class="login-title">Личный кабинет</span>
-          <label class="for-login" for="login-target"><span class="visually-hidden">Логин для входа в личный кабинет
-              на сайте.</span></label>
-          <input class="login-line" placeholder="email@example.com" type="email" name="login-input" id="login-target"
-            autocomplete="off" required>
-
-          <label class="for-password" for="password-target"><span class="visually-hidden">Пароль для входа в личный
-              кабинет на сайте.</span></label>
-          <input class="password-line" placeholder="Введите пароль" type="password" name="password-input"
-            id="password-target" autocomplete="off" required>
-
-          <div class="submit-part">
-            <button class="submit-button login-submit" type="submit">
-              Войти
-            </button>
-            <div class="recovery-registration">
-              <a class="text-link re-link" href="">Забыли пароль?</a>
-              <a class="text-link re-link" href="">Регистрация</a>
+            <div class="basket-bottom">
+              <button class="submit-button basket-submit" type="button">Оформить заказ</button>
+              <span class="basket-total">Итого: 790 ₽</span>
             </div>
           </div>
-        </form>
-        <!------------  Форма авторизации ------------>
+          <!------------  Корзина ------------>
 
-        <button class="basket-button" id="basket-btn" type="button" value="off"><span
-            class="visually-hidden">Открывает корзину.</span>2
-          товара</button>
+          <!------------  Пустая Корзина ------------>
 
-        <!------------  Корзина ------------>
-        <div class="basket-form" role="dialog" id="prebasket">
-          <span class="basket-title">Корзина</span>
-
-          <ul class="basket-list">
-
-            <li class="basket-item">
-              <a class="basket-item-link" href="">
-                <img class="basket-pic" src="images/malinka-basket.png" width="46" height="46"
-                  alt="Мороженое со вкусом Малины">
-                <div class="line-description">
-                  <span class="line-product">Малинка</span>
-                  <span class="line-qty">1 кг х 310 ₽</span>
-                </div>
-                <div class="line-amont">
-                  310 ₽
-                </div>
-              </a>
-              <button class="delete-btn" type="button"><span class=visually-hidden>Удалить позицию из
-                  корзины.</span></button>
-            </li>
-
-            <li class="basket-item">
-              <a class="basket-item-link" href="">
-                <img class="basket-pic" src="images/bublegum-basket.png" width="46" height="46"
-                  alt="Мороженое со вкусом Малины">
-                <div class="line-description">
-                  <span class="line-product">Бабл-гам</span>
-                  <span class="line-qty">1,5 кг х 320 ₽</span>
-                </div>
-                <div class="line-amont">
-                  480 ₽
-                </div>
-              </a>
-              <button class="delete-btn" type="button"><span class=visually-hidden>Удалить позицию из
-                  корзины.</span></button>
-            </li>
-
-          </ul>
-          <div class="basket-bottom">
-            <button class="submit-button basket-submit" type="button">Оформить заказ</button>
-            <span class="basket-total">Итого: 790 ₽</span>
+          <div class="empty-basket">
+            <span class="empty-message">Ваша корзина пока пуста</span>
           </div>
-        </div>
-        <!------------  Корзина ------------>
 
-        <!------------  Пустая Корзина ------------>
-
-        <div class="empty-basket">
-          <span class="empty-message">Ваша корзина пока пуста</span>
+          <!------------  Пустая Корзина ------------>
         </div>
 
-        <!------------  Пустая Корзина ------------>
       </div>
 
-    </div>
-
-  </header>
+    </header>
 
     <!-- ==================================== M A I N ==================================================================================  -->
 
@@ -192,7 +192,7 @@
               <h3 class="area-title">Сортировка:</h3>
 
               <div class="goods-options">
-                <select class="product-options" name="product-selection">
+                <select class="product-options" id="select-menu" name="product-selection">
                   <option class="product-options-item" value="top" selected>по популярности</option>
                   <option class="product-options-item" value="expensive">сначала дорогие</option>
                   <option class="product-options-item" value="cheap">сначала дешевые</option>
@@ -264,10 +264,8 @@
                   <label class="fatness-radio over-radio" for="fatness-over"><span class="label-over">выше
                       30%</span></label>
                 </div>
-
               </div>
             </div>
-
           </div>
 
           <div class="checkbox-line">
@@ -301,7 +299,6 @@
                     id="jams-additives">
                   <label class="additive-checkbox jams-box" for="jams-additives">джемы</label>
                 </div>
-
               </div>
             </div>
             <button class="button-filter" type="submit">Применить</button>
